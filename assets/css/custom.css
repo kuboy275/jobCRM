@@ -171,7 +171,8 @@ body {
     font-weight: 500;
 }
 
-.btn-page:hover {
+.btn-page:hover,
+.btn-page:focus {
     color: #fff;
 }
 
@@ -290,6 +291,11 @@ body {
 .footer-project .show-upload {
     padding-left: 80px;
     background-color: #f6ebcd;
+}
+
+.footer-project .show-upload p {
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 
