@@ -246,7 +246,7 @@ body {
 }
 
 .table thead tr>th {
-    padding: 12px;
+    padding: 10px 12px;
 }
 
 .table-bordered tbody tr td {
