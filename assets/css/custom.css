@@ -168,11 +168,15 @@ body {
     text-transform: uppercase;
     background-color: #ca3233;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .btn-page:hover {
     color: #fff;
+}
+
+.btn-sm1 {
+    padding: 3.2px 12px;
 }
 
 .navbar .navbar-header .navbar-brand {
@@ -221,6 +225,7 @@ body {
     left: 0;
     width: 100%;
     padding-left: 20px;
+    height: 48px;
 }
 
 
@@ -275,6 +280,7 @@ body {
 
 .table tbody tr td .progress {
     border-radius: 30px;
+    height: 12px;
 }
 
 .footer-project .controls-btn {
@@ -316,6 +322,9 @@ body {
     .footer-project .show-upload {
         padding-left: 10px;
         background-color: #f6ebcd;
+    }
+    .content {
+        margin-left: 0!important;
     }
     /* .table {
         width: 400%;

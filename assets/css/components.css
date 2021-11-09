@@ -304,7 +304,7 @@ a.label {
 }
 
 .navigation li>.has-create .icon-plus3 {
-    font-size: 14px;
+    font-size: 12px;
     display: block;
     position: absolute;
     top: 50%;
@@ -313,7 +313,14 @@ a.label {
     line-height: 1;
     padding: 5px;
     border-radius: 50%;
-    border: 1px solid #ac3aaa;
+}
+
+.navigation li>.has-create .icon-plus3 {
+    border: 1px solid #fff;
+}
+
+.navigation li.active>.has-create .icon-plus3 {
+    border: 1px solid #680107;
 }
 
 .navigation li.active>.has-ul:after {
@@ -22571,6 +22578,11 @@ label.display-block {
 .img-xs {
     width: 32px!important;
     height: 32px!important
+}
+
+.img-sm1 {
+    width: 20px!important;
+    height: 20px!important
 }
 
 .progress-list {

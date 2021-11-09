@@ -2810,7 +2810,7 @@ th {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    padding: 12px 20px;
+    padding: 4px 20px;
     line-height: 1.5384616;
     vertical-align: top;
     border-top: 1px solid #ddd
