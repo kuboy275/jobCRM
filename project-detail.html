@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+    <!-- Global stylesheets -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <!-- /theme JS files -->
+
+</head>
+
+<body>
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-default header-highlight bg-second">
+        <div class="navbar-header bg-primary">
+            <div class="navbar-brand text-white text-semibold d-flex justify-content-between align-items-center" href="index.html">
+                <a href="index.html" class="text-white">
+                    <div class="nav-account">
+                        <span class="avatar mr-1"> AN </span>
+                        <span class="name">an nguyen</span>
+                    </div>
+                </a>
+                <div class="noti">
+                    <span class="number mr-1">9</span>
+                    <i class="fa fa-lg fa-angle-double-down"></i>
+                </div>
+            </div>
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-menu2"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav ml-40">
+                <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
+                <li class="active">
+                    <a href="project-detail.html" class="text-primary text-semibold">
+                        OVERVIEW
+                    </a>
+                </li>
+                <li>
+                    <a href="project-detail-tasks.html#" class="text-primary text-semibold">
+                        TASKS
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#" class="text-primary text-semibold">
+                        FILES
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#" class="text-primary text-semibold">
+                        STATISTICS
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#" class="text-primary text-semibold">
+                        TEAM
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#" class="text-primary text-semibold">
+                        LINGUISTIC
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#" class="text-primary text-semibold">
+                        PRETRANLATION
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-main">
+                <div class="sidebar-content">
+                    <!-- User menu -->
+                    <div class="sidebar-user">
+                        <div class="category-content">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h3 class="media-heading text-semibold">Tomato Media</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /user menu -->
+                    <!-- Main navigation -->
+                    <div class="sidebar-category sidebar-category-visible">
+                        <div class="category-content no-padding">
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <!-- Main -->
+                                <li class="active">
+                                    <a href="project.html" class="has-create">
+                                        <i class="icon-folder-minus4"></i> <span> Projects </span>
+                                        <i class="icon-plus3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html" class="has-create">
+                                        <i class=" icon-file-text2"></i> <span> My tasks </span>
+                                        <i class="icon-plus3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html">
+                                        <i class="icon-folder-search"></i> <span> Available jobs </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#">
+                                        <i class="icon-newspaper2"></i>
+                                        <span>Linguistic assets</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                    <ul>
+                                        <li class="active-sub"><a href="#">Fixed navbar</a></li>
+                                        <li><a href="#">Fixed navbar</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="index.html">
+                                        <i class="icon-users4"></i> <span> Team </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html">
+                                        <i class="fa fa-hand-spock-o"></i> <span> Clients </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#">
+                                        <i class="icon-credit-card"></i>
+                                        <span>Payments</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">Fixed navbar</a></li>
+                                        <li><a href="#">Fixed navbar</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="index.html#">
+                                        <i class="icon-stats-growth"></i>
+                                        <span>Reports</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">Fixed navbar</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="index.html#">
+                                        <i class=" icon-gear"></i>
+                                        <span>Setting</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">Fixed navbar</a></li>
+                                    </ul>
+                                </li>
+                                <!-- /main -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /main navigation -->
+                </div>
+                <!-- main logo -->
+                <div class="sidebar-logo bg-primary">
+                    <h5 class="text-bold">LOGO</h5>
+                </div>
+                <!-- /main logo -->
+            </div>
+            <!-- /main sidebar -->
+
+
+            <!-- Main content -->
+            <div class="content-wrapper bg-white">
+
+                <!-- Content area -->
+                <div class="content ml-20">
+                    <!-- Main Projects overview-->
+                    <div class="projects-overview mt-5">
+                        <h3 class="overview-name pb-4 border-bottom">Project 101</h3>
+                        <div class="overview-content mt-4">
+                            <div class="row">
+                                <!-- CONTENT LEFT -->
+                                <div class="col-md-12 col-lg-8">
+                                    <div class="content-current">
+                                        <div class="d-flex align-items-center justify-content-between border-bottom">
+                                            <h5>Current Progress</h5>
+                                            <h6>Statistics</h6>
+                                        </div>
+                                        <div class="row align-items-center justify-content-between justify-content-md-start border-bottom">
+                                            <div class="col-6 col-sm-5">
+                                                <div class="d-flex align-items-center">
+                                                    <h6>Tranlation</h6>
+                                                    <p class="bg-second text-primary font-12px text-semibold mb-0 py-1 px-2 ml-3">Supplier needed</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex align-items-center justify-content-end justify-content-md-start">
+                                                    <div class="progress w-50 bg-light">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <span class="text-semibold font-10px p-1 bg-light text-dark ml-3"> 0%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-choose">
+                                            <h5 class="my-4">Choose the next step</h5>
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-6 mb-5 mb-lg-0">
+                                                    <div class="choose-box p-4 border border-primary border-radius-lg">
+                                                        <div class="d-flex align-items-center justify-content-between text-primary text-medium mb-4">
+                                                            <p class="mb-0">
+                                                                Invite your teammates to do the work
+                                                            </p>
+                                                            <i class="icon-envelop2"></i>
+                                                        </div>
+                                                        <button class="btn btn-page btn-sm1 text-unset"> 
+                                                            <i class="icon-user-plus font-12px mr-2"></i> Invite teammates
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-lg-6">
+                                                    <div class="choose-box p-4 border border-radius-lg ">
+                                                        <div class="d-flex align-items-center justify-content-between text-medium mb-4">
+                                                            <p class="mb-0">
+                                                                Invite your teammates to do the work
+                                                            </p>
+                                                            <i class="fa fa-language text-primary"></i>
+                                                        </div>
+                                                        <button class="btn btn-page2 btn-sm1 text-unset border"> 
+                                                            Edit myself
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /end -->
+
+                                <!-- CONTENT RIGHT -->
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="content-detail">
+                                        <div class="tabbable">
+                                            <ul class="nav nav-tabs nav-tabs-bottom bottom-divided nav-justified border-bottom">
+                                                <li class="active">
+                                                    <a class="mr-4 text-medium" href="components_tabs.html#tab1" data-toggle="tab">Active</a>
+                                                </li>
+                                                <li>
+                                                    <a class="mr-4 text-medium" href="components_tabs.html#tab2" data-toggle="tab">Inactive</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="tab1">
+                                                    <span class="bg-second text-primary px-2 py-1 text-medium font-12px">Created</span>
+                                                    <div class="properties mt-5">
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <p class="my-0 w-50 text-medium">Deadline</p>
+                                                            <p class="text-grey my-0"> 21/08/21 <span class="ml-3">10:45 PM</span></p>
+                                                        </div>
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <p class="my-0 w-50 text-medium">Client</p>
+                                                            <p class="text-grey my-0">ABCXYZ</p>
+                                                        </div>
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <p class="my-0 w-50 text-medium">Source Language</p>
+                                                            <p class="text-grey my-0">English</p>
+                                                        </div>
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <p class="my-0 w-50 text-medium">Target Languages</p>
+                                                            <p class="text-grey my-0">Vietnames</p>
+                                                        </div>
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <p class="my-0 w-50 text-medium">Projects manager</p>
+                                                            <p class="text-grey my-0">PM 01</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane" id="tab2">
+                                                    Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid laeggin.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /main Projects -->
+                </div>
+                <!-- /content area -->
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- /page container -->
+</body>
+
+</html>

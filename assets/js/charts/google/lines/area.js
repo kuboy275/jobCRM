@@ -14,7 +14,7 @@
 // ------------------------------
 
 // Initialize chart
-google.load("visualization", "1", {packages:["corechart"]});
+google.load("visualization", "1", { packages: ["corechart"] });
 google.setOnLoadCallback(drawAreaChart);
 
 
@@ -23,51 +23,42 @@ function drawAreaChart() {
 
     // Data
     var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales', 'Expenses'],
-        ['2004',  1000,      400],
-        ['2005',  1170,      460],
-        ['2006',  660,       1120],
-        ['2007',  1030,      540]
+        ['Year', '1', '2', '3', '4'],
+        ['2004', 12, 10, 14, 16],
+        ['2005', 14, 8, 18, 8],
+        ['2006', 14, 15, 11, 12],
+        ['2007', 10, 12, 16, 10]
     ]);
 
 
     // Options
     var options = {
-        fontName: 'Roboto',
-        height: 400,
-        curveType: 'function',
+        backgroundColor: 'transparent',
+        height: 170,
+        backgroundColor: 'tranparent',
         fontSize: 12,
-        areaOpacity: 0.4,
+        areaOpacity: 0,
         chartArea: {
-            left: '5%',
-            width: '90%',
-            height: 350
+            width: '94%',
+            height: 120
         },
-        pointSize: 4,
-        tooltip: {
-            textStyle: {
-                fontName: 'Roboto',
-                fontSize: 13
-            }
-        },
+        pointSize: 0,
+
         vAxis: {
-            title: 'Sales and Expenses',
-            titleTextStyle: {
-                fontSize: 13,
-                italic: false
-            },
-            gridarea:{
-                color: '#e5e5e5',
-                count: 10
-            },
-            minValue: 0
+            textPosition: 'none',
+        },
+        hAxis: {
+            showTextEvery: 3,
+            textStyle: { color: '#535c68' }
         },
         legend: {
-            position: 'top',
-            alignment: 'end',
-            textStyle: {
-                fontSize: 12
-            }
+            position: 'none',
+        },
+        series: {
+            0: { color: '#f6ebcd' },
+            1: { color: '#ff756f' },
+            2: { color: '#ca3233' },
+            3: { color: '#680107' },
         }
     };
 
@@ -80,7 +71,7 @@ function drawAreaChart() {
 // Resize chart
 // ------------------------------
 
-$(function () {
+$(function() {
 
     // Resize chart on sidebar width change and window resize
     $(window).on('resize', resize);

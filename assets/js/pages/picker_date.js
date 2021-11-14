@@ -1,13 +1,13 @@
 /* ------------------------------------------------------------------------------
-*
-*  # Date and time pickers
-*
-*  Specific JS code additions for picker_date.html page
-*
-*  Version: 1.1
-*  Latest update: Aug 10, 2016
-*
-* ---------------------------------------------------------------------------- */
+ *
+ *  # Date and time pickers
+ *
+ *  Specific JS code additions for picker_date.html page
+ *
+ *  Version: 1.1
+ *  Latest update: Aug 10, 2016
+ *
+ * ---------------------------------------------------------------------------- */
 
 $(function() {
 
@@ -57,7 +57,7 @@ $(function() {
 
 
     // Single picker
-    $('.daterange-single').daterangepicker({ 
+    $('.daterange-single').daterangepicker({
         singleDatePicker: true
     });
 
@@ -103,7 +103,7 @@ $(function() {
             startLabel: 'Начальная дата',
             endLabel: 'Конечная дата',
             customRangeLabel: 'Выбрать дату',
-            daysOfWeek: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт','Сб'],
+            daysOfWeek: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
             monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
             firstDay: 1
         }
@@ -113,10 +113,31 @@ $(function() {
     //
     // Pre-defined ranges and callback
     //
+    $('.daterange-dashboard').daterangepicker({
+            startDate: moment().subtract(1, 'days'),
+            endDate: moment(),
+            minDate: '01/01/2021',
+            maxDate: moment(),
+            dateLimit: { days: 60 },
+            opens: 'left',
+            applyClass: 'btn-small bg-slate',
+            cancelClass: 'btn-small btn-default'
+        },
+
+        function(start, end) {
+
+            if (start.month() === end.month()) {
+                $('.daterange-dashboard span').html(start.format('MMMM D') + ' &nbsp; - &nbsp; ' + end.format(' D, YYYY'));
+            } else {
+                $('.daterange-dashboard span').html(start.format('MMMM D') + ' &nbsp; - &nbsp; ' + end.format('MMMM D, YYYY'));
+            }
+            // $.jGrowl('Date range has been changed', { header: 'Update', theme: 'bg-primary', position: 'center', life: 1500 });
+        }
+    );
+    $('.daterange-dashboard span').html(moment().subtract(29, 'days').format('MMMM D') + ' &nbsp; - &nbsp; ' + moment().format('MMMM D, YYYY'));
 
     // Initialize with options
-    $('.daterange-predefined').daterangepicker(
-        {
+    $('.daterange-predefined').daterangepicker({
             startDate: moment().subtract(29, 'days'),
             endDate: moment(),
             minDate: '01/01/2014',
@@ -149,8 +170,7 @@ $(function() {
     //
 
     // Initialize with options
-    $('.daterange-ranges').daterangepicker(
-        {
+    $('.daterange-ranges').daterangepicker({
             startDate: moment().subtract(29, 'days'),
             endDate: moment(),
             minDate: '01/01/2012',
@@ -177,7 +197,7 @@ $(function() {
     $('.daterange-ranges span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' &nbsp; - &nbsp; ' + moment().format('MMMM D, YYYY'));
 
 
-    
+
     // Pick-a-date picker
     // ------------------------------
 
@@ -247,7 +267,7 @@ $(function() {
             picker_date.close();
         } else {
             picker_date.open();
-        }                        
+        }
         event.stopPropagation();
     });
 
@@ -273,17 +293,17 @@ $(function() {
 
     // Date limits
     $('.pickadate-limits').pickadate({
-        min: [2014,3,20],
-        max: [2014,7,14]
+        min: [2014, 3, 20],
+        max: [2014, 7, 14]
     });
 
 
     // Disable certain dates
     $('.pickadate-disable').pickadate({
         disable: [
-            [2015,8,3],
-            [2015,8,12],
-            [2015,8,20]
+            [2015, 8, 3],
+            [2015, 8, 12],
+            [2015, 8, 20]
         ]
     });
 
@@ -291,8 +311,7 @@ $(function() {
     // Disable date range
     $('.pickadate-disable-range').pickadate({
         disable: [
-            5,
-            [2013, 10, 21, 'inverted'],
+            5, [2013, 10, 21, 'inverted'],
             { from: [2014, 3, 15], to: [2014, 3, 25] },
             [2014, 3, 20, 'inverted'],
             { from: [2014, 3, 17], to: [2014, 3, 18], inverted: true }
@@ -369,7 +388,7 @@ $(function() {
             picker_time.close();
         } else {
             picker_time.open();
-        }                        
+        }
         event.stopPropagation();
     });
 
@@ -382,8 +401,8 @@ $(function() {
 
     // Time limits
     $('.pickatime-limits').pickatime({
-        min: [7,30],
-        max: [14,0]
+        min: [7, 30],
+        max: [14, 0]
     });
 
 
@@ -398,10 +417,10 @@ $(function() {
     // Disable times
     $('.pickatime-disabled').pickatime({
         disable: [
-            [0,30],
-            [2,0],
-            [8,30],
-            [9,0]
+            [0, 30],
+            [2, 0],
+            [8, 30],
+            [9, 0]
         ]
     });
 
@@ -409,8 +428,7 @@ $(function() {
     // Disabling ranges
     $('.pickatime-range').pickatime({
         disable: [
-            1,
-            [1, 30, 'inverted'],
+            1, [1, 30, 'inverted'],
             { from: [4, 30], to: [10, 30] },
             [6, 30, 'inverted'],
             { from: [8, 0], to: [9, 0], inverted: true }
@@ -422,11 +440,10 @@ $(function() {
     $('.pickatime-disableall').pickatime({
         disable: [
             true,
-            3, 5, 7,
-            [0,30],
-            [2,0],
-            [8,30],
-            [9,0]
+            3, 5, 7, [0, 30],
+            [2, 0],
+            [8, 30],
+            [9, 0]
         ]
     });
 
@@ -502,7 +519,7 @@ $(function() {
 
 
     // On demand picker
-    $('#ButtonCreationDemoButton').click(function (e) {
+    $('#ButtonCreationDemoButton').click(function(e) {
         $('#ButtonCreationDemoInput').AnyTime_noPicker().AnyTime_picker().focus();
         e.preventDefault();
     });
@@ -513,17 +530,17 @@ $(function() {
     //
 
     // Options
-    var oneDay = 24*60*60*1000;
+    var oneDay = 24 * 60 * 60 * 1000;
     var rangeDemoFormat = "%e-%b-%Y";
-    var rangeDemoConv = new AnyTime.Converter({format:rangeDemoFormat});
+    var rangeDemoConv = new AnyTime.Converter({ format: rangeDemoFormat });
 
     // Set today's date
-    $("#rangeDemoToday").click( function (e) {
+    $("#rangeDemoToday").click(function(e) {
         $("#rangeDemoStart").val(rangeDemoConv.format(new Date())).change();
     });
 
     // Clear dates
-    $("#rangeDemoClear").click( function (e) {
+    $("#rangeDemoClear").click(function(e) {
         $("#rangeDemoStart").val("").change();
     });
 
@@ -537,29 +554,27 @@ $(function() {
         try {
             var fromDay = rangeDemoConv.parse($("#rangeDemoStart").val()).getTime();
 
-            var dayLater = new Date(fromDay+oneDay);
-                dayLater.setHours(0,0,0,0);
+            var dayLater = new Date(fromDay + oneDay);
+            dayLater.setHours(0, 0, 0, 0);
 
-            var ninetyDaysLater = new Date(fromDay+(90*oneDay));
-                ninetyDaysLater.setHours(23,59,59,999);
+            var ninetyDaysLater = new Date(fromDay + (90 * oneDay));
+            ninetyDaysLater.setHours(23, 59, 59, 999);
 
             // End date
             $("#rangeDemoFinish")
-            .AnyTime_noPicker()
-            .removeAttr("disabled")
-            .val(rangeDemoConv.format(dayLater))
-            .AnyTime_picker({
-                earliest: dayLater,
-                format: rangeDemoFormat,
-                latest: ninetyDaysLater
-            });
-        }
-
-        catch(e) {
+                .AnyTime_noPicker()
+                .removeAttr("disabled")
+                .val(rangeDemoConv.format(dayLater))
+                .AnyTime_picker({
+                    earliest: dayLater,
+                    format: rangeDemoFormat,
+                    latest: ninetyDaysLater
+                });
+        } catch (e) {
 
             // Disable End date field
-            $("#rangeDemoFinish").val("").attr("disabled","disabled");
+            $("#rangeDemoFinish").val("").attr("disabled", "disabled");
         }
     });
-    
+
 });

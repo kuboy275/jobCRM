@@ -1696,9 +1696,9 @@ input[class*=bg-]+.form-control-feedback {
     border: 0
 }
 
-.btn.focus,
-.btn:focus,
-.btn:hover {
+
+/* .btn.focus,
+.btn:focus {
     -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset;
     box-shadow: 0 0 0 100px rgba(0, 0, 0, .05) inset
 }
@@ -1707,13 +1707,14 @@ input[class*=bg-]+.form-control-feedback {
 .btn:active {
     -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, .1) inset;
     box-shadow: 0 0 0 100px rgba(0, 0, 0, .1) inset
-}
+} */
 
-.btn[class*=bg-].focus,
+
+/* .btn[class*=bg-].focus,
 .btn[class*=bg-]:focus,
 .btn[class*=bg-]:hover {
     color: #fff
-}
+} */
 
 .btn.text-size-small {
     line-height: 1.6666667
@@ -3570,7 +3571,8 @@ li+.dropdown-header.highlight {
     margin-bottom: 0;
     border-width: 1px 0;
     padding-left: 0;
-    padding-right: 0
+    padding-right: 0;
+    border-bottom: none;
 }
 
 @media (min-width:769px) {
@@ -6266,7 +6268,8 @@ a.thumbnail:hover {
 .progress {
     position: relative;
     margin-bottom: 0;
-    height: 18px;
+    height: 10px;
+    border-radius: 15px;
 }
 
 .progress-bar {
@@ -7325,8 +7328,4 @@ h6.panel-title {
 .popover[class*=border-].left>.arrow,
 .popover[class*=border-].left>.arrow:after {
     border-left-color: inherit
-}
-
-.font-12px {
-    font-size: 12px;
 }

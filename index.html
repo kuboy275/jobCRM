@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
     <!-- Global stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="assets/css/core.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link href="./assets/css/custom.css" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -25,16 +25,22 @@
     <!-- /core JS files -->
 
     <!-- Theme JS files -->
-    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <!--  -->
     <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
-
+    <script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/legacy.js"></script>
+    <!--  -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--  -->
     <script type="text/javascript" src="assets/js/core/app.js"></script>
-    <script type="text/javascript" src="assets/js/pages/dashboard.js"></script>
+    <script type="text/javascript" src="assets/js/pages/picker_date.js"></script>
+    <script type="text/javascript" src="assets/js/charts/google/lines/area.js"></script>
+
+
     <!-- /theme JS files -->
 
 </head>
@@ -44,25 +50,27 @@
     <!-- Main navbar -->
     <div class="navbar navbar-default header-highlight bg-second">
         <div class="navbar-header bg-primary">
-            <a class="navbar-brand text-white text-semibold d-flex justify-content-between align-items-center" href="index.html">
-                <div class="nav-account">
-                    <span class="avatar mr-5"> AN </span>
-                    <span class="name">an nguyen</span>
-                </div>
+            <div class="navbar-brand text-white text-semibold d-flex justify-content-between align-items-center" href="index.html">
+                <a href="index.html" class="text-white">
+                    <div class="nav-account">
+                        <span class="avatar mr-1"> AN </span>
+                        <span class="name">an nguyen</span>
+                    </div>
+                </a>
                 <div class="noti">
-                    <span class="number mr-5">9</span>
+                    <span class="number mr-1">9</span>
                     <i class="fa fa-lg fa-angle-double-down"></i>
                 </div>
-            </a>
+            </div>
             <ul class="nav navbar-nav visible-xs-block">
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-menu2"></i></a></li>
                 <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
             </ul>
         </div>
 
-        <div class="navbar-collapse collapse" id="navbar-mobile">
+        <!-- <div class="navbar-collapse collapse" id="navbar-mobile">
             <ul class="nav navbar-nav ml-40">
-                <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
+                <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
                 <li class="active">
                     <a href="index.html#" class="text-primary text-semibold">
                         CURRENT
@@ -72,7 +80,7 @@
             </ul>
 
 
-        </div>
+        </div> -->
     </div>
     <!-- /main navbar -->
 
@@ -102,8 +110,8 @@
                         <div class="category-content no-padding">
                             <ul class="navigation navigation-main navigation-accordion">
                                 <!-- Main -->
-                                <li class="active">
-                                    <a href="index.html" class="has-create">
+                                <li>
+                                    <a href="project.html" class="has-create">
                                         <i class="icon-folder-minus4"></i> <span> Projects </span>
                                         <i class="icon-plus3"></i>
                                     </a>
@@ -131,7 +139,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="index.html">
+                                    <a href="team.html">
                                         <i class="icon-users4"></i> <span> Team </span>
                                     </a>
                                 </li>
@@ -187,175 +195,321 @@
 
 
             <!-- Main content -->
-            <div class="content-wrapper bg-white">
+            <div class="content-wrapper bg-second">
 
                 <!-- Content area -->
                 <div class="content ml-15">
-                    <!-- Main Projects -->
-                    <div class="projects">
-                        <div class="row pt-20 mt-20">
-                            <div class="col-lg-12">
-                                <!-- header btn -->
-                                <div class="header-project">
-                                    <a href="#" class="btn btn-page btn-sm1">CREATE PROJECT</a>
-                                    <a href="" class="btn btn-page btn-sm1">POST AS JOB</a>
-                                </div>
-                                <!-- table responsive -->
-                                <div class="table-responsive mt-20 mb-20">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr class="bg-grey text-bold">
-                                                <th>ID <i class="fa fa-long-arrow-down font-12px"></i> </th>
-                                                <th>Name</th>
-                                                <th>Status</th>
-                                                <th>Progress</th>
-                                                <th>Client</th>
-                                                <th>Vender</th>
-                                                <th>Language pair </th>
-                                                <th>Feedback</th>
-                                                <th>Start date </th>
-                                                <th>Deadline </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-semibold">
-                                            <tr>
-                                                <td class="text-primary">111</td>
-                                                <td class="text-primary">Eugene</td>
-                                                <td>
-                                                    <div class="status d-flex align-items-center justify-content-between">
-                                                        <div class="stt-name d-flex align-items-center">
-                                                            <span class="dot in-progress"></span>
-                                                            <span class="name ml-5 mr-5">In progress</span>
-                                                        </div>
-                                                        <span class="text-primary font-12">90</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%"></div>
-                                                    </div>
-                                                </td>
-                                                <td>ABCXYZ</td>
-                                                <td>...</td>
-                                                <td>en > vi</td>
-                                                <td> ...</td>
-                                                <td>21/08/20 </td>
-                                                <td>
-                                                    <span class="day">21/08/20</span>
-                                                    <br>
-                                                    <span class="hour">10:45 PM </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-primary">111</td>
-                                                <td class="text-primary">Eugene</td>
-                                                <td>
-                                                    <div class="status d-flex align-items-center justify-content-between">
-                                                        <div class="stt-name d-flex align-items-center">
-                                                            <span class="dot draft"></span>
-                                                            <span class="name ml-5 mr-5">Draft</span>
-                                                        </div>
-                                                        <span class="text-primary font-12">90</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="./assets/images/icons/video-play.svg" class="mr-5 img-sm1" alt=""> Start projects
-                                                    </div>
-                                                </td>
-                                                <td>ABCXYZ</td>
-                                                <td>...</td>
-                                                <td>en > vi</td>
-                                                <td> ...</td>
-                                                <td>21/08/20 </td>
-                                                <td>
-                                                    <span class="day">21/08/20</span>
-                                                    <br>
-                                                    <span class="hour">10:45 PM </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-primary">111</td>
-                                                <td class="text-primary">Eugene</td>
-                                                <td>
-                                                    <div class="status d-flex align-items-center justify-content-between">
-                                                        <div class="stt-name d-flex align-items-center">
-                                                            <span class="dot qa-check"></span>
-                                                            <span class="name ml-5 mr-5">Qa check</span>
-                                                        </div>
-                                                        <span class="text-primary font-12">90</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="./assets/images/icons/review.svg" class="mr-5 img-sm1" alt=""> Review request
-                                                    </div>
-                                                </td>
-                                                <td>ABCXYZ</td>
-                                                <td>...</td>
-                                                <td>en > vi</td>
-                                                <td> ...</td>
-                                                <td>21/08/20 </td>
-                                                <td>
-                                                    <span class="day">21/08/20</span>
-                                                    <br>
-                                                    <span class="hour">10:45 PM </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-primary">111</td>
-                                                <td class="text-primary">Eugene</td>
-                                                <td>
-                                                    <div class="status d-flex align-items-center justify-content-between">
-                                                        <div class="stt-name d-flex align-items-center">
-                                                            <span class="dot finished"></span>
-                                                            <span class="name ml-5 mr-5">finished</span>
-                                                        </div>
-                                                        <span class="text-primary font-12">90</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="./assets/images/icons/download.svg" class="mr-5 img-sm1" alt=""> Download
-                                                    </div>
-                                                </td>
-                                                <td>ABCXYZ</td>
-                                                <td>...</td>
-                                                <td>en > vi</td>
-                                                <td> ...</td>
-                                                <td>21/08/20 </td>
-                                                <td>
-                                                    <span class="day">21/08/20</span>
-                                                    <br>
-                                                    <span class="hour">10:45 PM </span>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="footer-project">
-                                    <div class="controls-btn">
-                                        <a href="#" class="btn btn-page btn-sm1">UPLOAD</a>
-                                        <a href="#" class="btn btn-page btn-sm1 ml-5">ASSIGN</a>
-                                        <a href="#" class="btn btn-sm1">
-                                            <img src="./assets/images/icons/trash.svg" height="20px" alt="">
+                    <section class="dashboard">
+                        <div class="header mb-5">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-md-12 col-lg-12 col-xl-6 mb-5 mb-xl-0">
+                                    <div class="header-left d-flex align-items-center">
+                                        <h3 class="mr-4 my-0 text-bold">Dashboard</h3>
+                                        <a href="#" class="btn btn-page2 btn-sm1 text-bold">
+                                            <img src="./assets/images/icons/pen.png" width="15px" height="15px" alt=""> Customise
                                         </a>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-6 mt-10">
-                                            <div class="show-upload pt-5 pb-5 d-flex align-items-center justify-content-between pr-10 ">
-                                                <p class="text-medium">Brochure BBC_edit2.doc</p>
-                                                <a href="#" class="btn btn-page btn-sm1">OPEN</a>
-                                            </div>
+                                </div>
+                                <div class="header-right px-4">
+                                    <div class=" px-4 py-1 bg-white d-flex align-items-center justify-content-betwen">
+                                        <p class="text-secondary mb-0 text-medium">Custom</p>
+                                        <div class="form-group mb-0 mx-2">
+                                            <button type="button" class="btn bg-white text-semibold daterange-dashboard border-0">
+                                                    <span></span>
+                                                    <b class="caret"></b>
+                                                </button>
+                                        </div>
+                                        <div class="pick-controls">
+                                            <a href="#">
+                                                <i class="icon-arrow-left22 text-secondary"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="icon-arrow-right22 text-secondary"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- /main Projects -->
+                        <!-- DASHBOARD CONTENT -->
+                        <div class="dashboard-content">
+                            <div class="row">
+                                <!-- DASHBOARD FILE -->
+                                <div class="col-lg-12 col-xl-6 pr-4 pr-lg-2">
+
+                                    <div class="dashboard-file bg-white p-4">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="my-0 mr-4 text-semibold">Quick Start</h5>
+                                            <p class="text-primary text-medium mb-0">See full file</p>
+                                        </div>
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 pr-4 pr-lg-2">
+                                                <div class="drop-file border">
+                                                    <div class="icon text-center py-4">
+                                                        <img src="./assets/images/icons/translate.png" width="20px" height="20px" alt="">
+                                                        <p class="mb-0 font-8px text-medium mt-3">Translation</p>
+                                                    </div>
+                                                    <button class="btn text-primary font-10px"> <i class="icon-plus22"></i> Drop file here </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 px-4 px-lg-2">
+                                                <div class="drop-file border">
+                                                    <div class="icon text-center py-4">
+                                                        <img src="./assets/images/icons/note.png" width="20px" height="20px" alt="">
+                                                        <p class="mb-0 font-8px text-medium mt-3">Text Editing</p>
+                                                    </div>
+                                                    <button class="btn text-primary font-10px"> <i class="icon-plus22"></i> Drop file here </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 px-4 px-lg-2">
+                                                <div class="drop-file border">
+                                                    <div class="icon text-center py-4">
+                                                        <img src="./assets/images/icons/proof.png" width="20px" height="20px" alt="">
+                                                        <p class="mb-0 font-8px text-medium mt-3">Proof reading</p>
+                                                    </div>
+                                                    <button class="btn text-primary font-10px"> <i class="icon-plus22"></i> Drop file here </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 pl-4 pl-lg-2">
+                                                <div class="drop-file border">
+                                                    <div class="icon text-center py-4">
+                                                        <div class="d-flex align-items-center justify-content-center">
+                                                            <img src="./assets/images/icons/translate.png" width="20px" height="20px" alt="">
+                                                            <i class="icon-plus22 text-primary font-10px mx-2 mb-n2"></i>
+                                                            <img src="./assets/images/icons/note.png" width="20px" height="20px" alt="">
+                                                        </div>
+                                                        <p class="mb-0 font-8px text-medium mt-3">Translation + Text Editing</p>
+                                                    </div>
+                                                    <button class="btn text-primary font-10px"> <i class="icon-plus22"></i> Drop file here </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- upload file -->
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-6 col-xl-3 mb-3 pr-2">
+                                                <div class="drop-file-upload text-center py-5">
+                                                    <button class="btn text-primary bg-white"><i class="icon-plus2"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /end -->
+                                <!-- DASHBOARD CHART -->
+                                <div class="col-lg-12 col-xl-6 pl-4 pl-lg-2">
+                                    <div class="dashboard-chart bg-white p-4 pr-5">
+                                        <div class="quantity position-relative">
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-6 col-xl-3 pr-4 pr-lg-0">
+                                                    <div class="item bg-1 p-2">
+                                                        <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/translate2.png" alt=""></div>
+                                                        <div class="text text-right">
+                                                            <h6 class="text-semibold font-12px my-1">305</h6>
+                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-lg-6 col-xl-3 px-4 px-lg-0">
+                                                    <div class="item bg-2 p-2">
+                                                        <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/note2.png" alt=""></div>
+                                                        <div class="text text-right">
+                                                            <h6 class="text-semibold font-12px my-1">305</h6>
+                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-lg-6 col-xl-3 px-4 px-lg-0">
+                                                    <div class="item bg-3 p-2">
+                                                        <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/back.png" alt=""></div>
+                                                        <div class="text text-right">
+                                                            <h6 class="text-semibold font-12px my-1">305</h6>
+                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-lg-6 col-xl-3 pl-4 pl-lg-0">
+                                                    <div class="item bg-4 p-2">
+                                                        <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/hand-money.png" alt=""></div>
+                                                        <div class="text text-white text-right">
+                                                            <h6 class="text-semibold font-12px my-1">305</h6>
+                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quantity-list-icon cursor-pointer">
+                                                <i class="fa fa-ellipsis-v font-18px"></i>
+                                            </div>
+                                        </div>
+                                        <div class="chart-container mt-4">
+                                            <div class="chart" id="google-area"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /end -->
+
+                                <!-- DASHBOARD LIST TABLE -->
+                                <div class="col-lg-12 mt-3">
+                                    <div class="dashboard-list bg-white pl-0 p-4">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="my-0 mr-4 text-semibold">Your current projects</h5>
+                                            <p class="text-primary text-medium mb-0">Show full projects</p>
+                                        </div>
+                                        <!-- table responsive -->
+                                        <div class="table-responsive mt-20 mb-20">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr class="bg-grey text-bold">
+                                                        <th>ID <i class="fa fa-long-arrow-down font-12px"></i> </th>
+                                                        <th>Name</th>
+                                                        <th>Status</th>
+                                                        <th>Progress</th>
+                                                        <th>Client</th>
+                                                        <th>Vender</th>
+                                                        <th>Language pair </th>
+                                                        <th>Feedback</th>
+                                                        <th>Start date </th>
+                                                        <th>Deadline </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-semibold">
+                                                    <tr>
+                                                        <td class="text-primary">111</td>
+                                                        <td class="text-primary">Eugene</td>
+                                                        <td>
+                                                            <div class="status d-flex align-items-center justify-content-between">
+                                                                <div class="stt-name d-flex align-items-center">
+                                                                    <span class="dot in-progress"></span>
+                                                                    <span class="name mx-2">In progress</span>
+                                                                </div>
+                                                                <span class="text-primary font-12">90</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>ABCXYZ</td>
+                                                        <td>...</td>
+                                                        <td>en > vi</td>
+                                                        <td> ...</td>
+                                                        <td>21/08/20 </td>
+                                                        <td>
+                                                            <span class="day">21/08/20</span>
+                                                            <br>
+                                                            <span class="hour">10:45 PM </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-primary">111</td>
+                                                        <td class="text-primary">Eugene</td>
+                                                        <td>
+                                                            <div class="status d-flex align-items-center justify-content-between">
+                                                                <div class="stt-name d-flex align-items-center">
+                                                                    <span class="dot draft"></span>
+                                                                    <span class="name mx-2">Draft</span>
+                                                                </div>
+                                                                <span class="text-primary font-12">90</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./assets/images/icons/video-play.svg" class="mr-2 img-sm1" alt=""> Start projects
+                                                            </div>
+                                                        </td>
+                                                        <td>ABCXYZ</td>
+                                                        <td>...</td>
+                                                        <td>en > vi</td>
+                                                        <td> ...</td>
+                                                        <td>21/08/20 </td>
+                                                        <td>
+                                                            <span class="day">21/08/20</span>
+                                                            <br>
+                                                            <span class="hour">10:45 PM </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-primary">111</td>
+                                                        <td class="text-primary">Eugene</td>
+                                                        <td>
+                                                            <div class="status d-flex align-items-center justify-content-between">
+                                                                <div class="stt-name d-flex align-items-center">
+                                                                    <span class="dot qa-check"></span>
+                                                                    <span class="name mx-2">Qa check</span>
+                                                                </div>
+                                                                <span class="text-primary font-12">90</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./assets/images/icons/review.svg" class="mr-2 img-sm1" alt=""> Review request
+                                                            </div>
+                                                        </td>
+                                                        <td>ABCXYZ</td>
+                                                        <td>...</td>
+                                                        <td>en > vi</td>
+                                                        <td> ...</td>
+                                                        <td>21/08/20 </td>
+                                                        <td>
+                                                            <span class="day">21/08/20</span>
+                                                            <br>
+                                                            <span class="hour">10:45 PM </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-primary">111</td>
+                                                        <td class="text-primary">Eugene</td>
+                                                        <td>
+                                                            <div class="status d-flex align-items-center justify-content-between">
+                                                                <div class="stt-name d-flex align-items-center">
+                                                                    <span class="dot finished"></span>
+                                                                    <span class="name mx-2">finished</span>
+                                                                </div>
+                                                                <span class="text-primary font-12">90</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./assets/images/icons/download.svg" class="mr-2 img-sm1" alt=""> Download
+                                                            </div>
+                                                        </td>
+                                                        <td>ABCXYZ</td>
+                                                        <td>...</td>
+                                                        <td>en > vi</td>
+                                                        <td> ...</td>
+                                                        <td>21/08/20 </td>
+                                                        <td>
+                                                            <span class="day">21/08/20</span>
+                                                            <br>
+                                                            <span class="hour">10:45 PM </span>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /end -->
+                                <!-- DASHBOARD FOOTER  -->
+                                <div class="col-lg-12 mt-5">
+                                    <div class="dashboard-footer d-flex justify-content-end">
+                                        <div class="bg-white d-flex align-items-center">
+                                            <a href="#" class="text-grey py-3 px-4 border-right"> <i class="icon-search4"></i> </a>
+                                            <a href="#" class="text-grey py-3 px-4 border-right position-relative">
+                                                <i class="icon-comments"></i>
+                                                <span class="bg-primary px-2  font-8px border-radius quantity">5</span>
+                                            </a>
+                                            <a href="#" class="text-grey py-3 px-4"> <i class="icon-calendar"></i> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /end -->
+                            </div>
+                        </div>
+                        <!-- /end -->
+                    </section>
                 </div>
                 <!-- /content area -->
             </div>

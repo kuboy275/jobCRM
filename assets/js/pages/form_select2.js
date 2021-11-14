@@ -1,13 +1,13 @@
 /* ------------------------------------------------------------------------------
-*
-*  # Select2 selects
-*
-*  Specific JS code additions for form_select2.html page
-*
-*  Version: 1.1
-*  Latest update: Nov 20, 2015
-*
-* ---------------------------------------------------------------------------- */
+ *
+ *  # Select2 selects
+ *
+ *  Specific JS code additions for form_select2.html page
+ *
+ *  Version: 1.1
+ *  Latest update: Nov 20, 2015
+ *
+ * ---------------------------------------------------------------------------- */
 
 $(function() {
 
@@ -193,7 +193,7 @@ $(function() {
     //
 
     // Setup matcher
-    function matchStart (term, text) {
+    function matchStart(term, text) {
         if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) {
             return true;
         }
@@ -202,7 +202,7 @@ $(function() {
     }
 
     // Initialize
-    $.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) {
+    $.fn.select2.amd.require(['select2/compat/matcher'], function(oldMatcher) {
         $(".select-matched-customize").select2({
             minimumResultsForSearch: Infinity,
             placeholder: "Select a State",
@@ -218,11 +218,11 @@ $(function() {
 
     // Data
     var array_data = [
-        {id: 0, text: 'enhancement'},
-        {id: 1, text: 'bug'},
-        {id: 2, text: 'duplicate'},
-        {id: 3, text: 'invalid'},
-        {id: 4, text: 'wontfix'}
+        { id: 0, text: 'enhancement' },
+        { id: 1, text: 'bug' },
+        { id: 2, text: 'duplicate' },
+        { id: 3, text: 'invalid' },
+        { id: 4, text: 'wontfix' }
     ];
 
     // Loading array data
@@ -239,7 +239,7 @@ $(function() {
     //
 
     // Format displayed data
-    function formatRepo (repo) {
+    function formatRepo(repo) {
         if (repo.loading) return repo.text;
 
         var markup = "<div class='select2-result-repository clearfix'>" +
@@ -262,7 +262,7 @@ $(function() {
     }
 
     // Format selection
-    function formatRepoSelection (repo) {
+    function formatRepoSelection(repo) {
         return repo.full_name || repo.text;
     }
 
@@ -272,13 +272,13 @@ $(function() {
             url: "https://api.github.com/search/repositories",
             dataType: 'json',
             delay: 250,
-            data: function (params) {
+            data: function(params) {
                 return {
                     q: params.term, // search term
                     page: params.page
                 };
             },
-            processResults: function (data, params) {
+            processResults: function(data, params) {
 
                 // parse the results into the format expected by Select2
                 // since we are using custom formatting functions we do not need to
@@ -295,7 +295,7 @@ $(function() {
             },
             cache: true
         },
-        escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+        escapeMarkup: function(markup) { return markup; }, // let our custom formatter work
         minimumInputLength: 1,
         templateResult: formatRepo, // omitted for brevity, see the source of this page
         templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
@@ -312,8 +312,8 @@ $(function() {
         minimumResultsForSearch: Infinity,
         placeholder: "Select State..."
     });
-    $(".access-get").click(function () { alert("Selected value is: "+$(".select-access-value").val()); });
-    $(".access-set").click(function () { $(".select-access-value").val("CA").trigger("change"); });
+    $(".access-get").click(function() { alert("Selected value is: " + $(".select-access-value").val()); });
+    $(".access-set").click(function() { $(".select-access-value").val("CA").trigger("change"); });
 
 
     // Open/close menu
@@ -321,8 +321,8 @@ $(function() {
         minimumResultsForSearch: Infinity,
         placeholder: "Select State..."
     });
-    $(".access-open").click(function () { $(".select-access-open").select2("open"); });
-    $(".access-close").click(function () { $(".select-access-open").select2("close"); });
+    $(".access-open").click(function() { $(".select-access-open").select2("open"); });
+    $(".access-close").click(function() { $(".select-access-open").select2("close"); });
 
 
     // Enable/disable menu
@@ -330,8 +330,8 @@ $(function() {
         minimumResultsForSearch: Infinity,
         placeholder: "Select State..."
     });
-    $(".access-disable").click(function () { $(".select-access-enable").prop("disabled", true); });
-    $(".access-enable").click(function () { $(".select-access-enable").prop("disabled", false); });
+    $(".access-disable").click(function() { $(".select-access-enable").prop("disabled", true); });
+    $(".access-enable").click(function() { $(".select-access-enable").prop("disabled", false); });
 
 
     // Destroy/create menu
@@ -342,8 +342,8 @@ $(function() {
         });
     }
     create_menu();
-    $(".access-create").on("click", function () { return create_menu()});
-    $(".access-destroy").on("click", function () { $('.select-access-create').select2("destroy"); });
+    $(".access-create").on("click", function() { return create_menu() });
+    $(".access-destroy").on("click", function() { $('.select-access-create').select2("destroy"); });
 
 
 
@@ -354,23 +354,23 @@ $(function() {
     // Reacting to external value changes
     $(".select-access-multiple-value").select2();
     $(".change-to-ca").click(function() { $(".select-access-multiple-value").val("CA").trigger("change"); });
-    $(".change-to-ak-co").click(function() { $(".select-access-multiple-value").val(["AK","CO"]).trigger("change"); });
+    $(".change-to-ak-co").click(function() { $(".select-access-multiple-value").val(["AK", "CO"]).trigger("change"); });
 
 
     // Open/close menu
     $('.select-access-multiple-open').select2({
         minimumResultsForSearch: Infinity
     });
-    $(".access-multiple-open").click(function () { $(".select-access-multiple-open").select2("open"); });
-    $(".access-multiple-close").click(function () { $(".select-access-multiple-open").select2("close"); });
+    $(".access-multiple-open").click(function() { $(".select-access-multiple-open").select2("open"); });
+    $(".access-multiple-close").click(function() { $(".select-access-multiple-open").select2("close"); });
 
 
     // Enable/disable menu
     $('.select-access-multiple-enable').select2({
         minimumResultsForSearch: Infinity
     });
-    $(".access-multiple-disable").click(function () { $(".select-access-multiple-enable").prop("disabled", true); });
-    $(".access-multiple-enable").click(function () { $(".select-access-multiple-enable").prop("disabled", false); });
+    $(".access-multiple-disable").click(function() { $(".select-access-multiple-enable").prop("disabled", true); });
+    $(".access-multiple-enable").click(function() { $(".select-access-multiple-enable").prop("disabled", false); });
 
 
     // Destroy/create menu
@@ -380,14 +380,14 @@ $(function() {
         });
     }
     create_menu_multiple();
-    $(".access-multiple-create").on("click", function () { return create_menu_multiple()});
-    $(".access-multiple-destroy").on("click", function () { $('.select-access-multiple-create').select2("destroy"); });
+    $(".access-multiple-create").on("click", function() { return create_menu_multiple() });
+    $(".access-multiple-destroy").on("click", function() { $('.select-access-multiple-create').select2("destroy"); });
 
 
     // Clear selection
     $('.select-access-multiple-clear').select2({
         minimumResultsForSearch: Infinity
     });
-    $(".access-multiple-clear").on("click", function () { $(".select-access-multiple-clear").val(null).trigger("change"); });
-    
+    $(".access-multiple-clear").on("click", function() { $(".select-access-multiple-clear").val(null).trigger("change"); });
+
 });
