@@ -70,7 +70,7 @@
                     <div class="col-lg-5 bg-white">
                         <div class="login-form pt-5 px-5">
                             <div class="login-controls text-right mb-5">
-                                <a href="#" class="btn mr-4"> Sign up</a>
+                                <a href="#!" data-toggle="modal" data-target="#modal_register" class="btn mr-4"> Sign up</a>
                                 <a href="#" class="btn btn-page btn-sm1 text-unset">
                                     Get started
                                     <i class="icon-arrow-right7 ml-4"></i>
@@ -108,7 +108,7 @@
                                         <button class="btn btn-page w-100">sign in</button>
                                         <!-- or login -->
                                         <div class="or-login">
-                                            <button class="btn w-100 my-4">
+                                            <button class="btn w-100 my-4" data-toggle="modal" data-target="#modal_verified-email">
                                                 <img src="./assets/images/icons/google.png" width="20px" class="mr-2" alt="">
                                                 Sign in with Google</button>
                                             <button class="btn w-100">
@@ -124,8 +124,145 @@
                     <!-- /end -->
                 </div>
             </div>
-        </div>
+            <!-- ======================= -->
+            <!-- MODAL REGISTER -->
+            <div id="modal_register" class="modal fade">
+                <div class="modal-dialog my-0">
+                    <div class="modal-content border-0">
+                        <div class="modal-header">
+                            <h3 class="text-second my-4">Sign in</h3>
+                        </div>
 
+                        <div class="modal-body">
+                            <form action="#!">
+                                <div class="row">
+                                    <!--  -->
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="#" class="text-second text-semibold"> First Name </label>
+                                            <input type="text" class="form-control" placeholder="Eg. John" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="#" class="text-second text-semibold"> Last Name </label>
+                                            <input type="text" class="form-control" placeholder="Eg. Smith" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="#" class="text-second text-semibold"> Account type </label>
+
+                                            <select class="select w-50">
+                                                <option value="AZ">Language service providers</option>
+                                                <option value="CO">Freelancers</option>
+                                                <option value="WY" selected>Organizations</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="#" class="text-second text-semibold"> Email </label>
+                                            <input type="email" class="form-control" placeholder="eg. john@gmail.com" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="#" class="text-second text-semibold"> User name</label>
+                                            <input type="text" class="form-control" placeholder="Your username" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="#" class="text-second text-semibold"> Passowrd </label>
+                                            <input type="password" class="form-control" placeholder="Your password" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="#" class="text-second text-semibold"> Repeat passowrd </label>
+                                            <input type="password" class="form-control" placeholder="Your password" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-inline checkbox-left">
+                                        <input type="checkbox" class="styled">
+                                        I agree to the <a href="#" class="text-semibold"> Term of User </a >
+                                    </label>
+                                </div>
+
+                                <div class="form-group text-right">
+                                    <button class="btn btn-page btn-sm1" data-toggle="modal" data-target="#modal_success-message">SIGN UP</button>
+                                    <button type="button" class="btn btn-light btn-sm1 ml-2" data-dismiss="modal">SIGN IN <i class="fa fa-long-arrow-right ml-2"></i> </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MODAL REGISTER -->
+            <!-- ======================= -->
+            <!-- START MODAL SUCCESS MESSAGE -->
+
+            <div id="modal_success-message" class="modal fade">
+                <div class="modal-dialog modal-sm my-0">
+                    <div class="modal-content px-5 py-4 border-radius-xl shadow-sm">
+                        <div class="modal-header justify-content-center">
+                            <img src="./assets/images/icons/check-register.png" alt="">
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <h6 class="text-primary mb-4">Thanks! your account has been successfully created.</h6>
+                            <p>
+                                Please check your inbox, a code is sent on your email, which will be required when you will reach to the venue and to login your account.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-page px-5 border-radius-xl" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END MODAL SUCCESS MESSAGE -->
+            <!-- ======================= -->
+
+            <!-- START MODAL VERIFIED EMAIL -->
+            <div id="modal_verified-email" class="modal fade">
+                <div class="modal-dialog modal-sm my-0">
+                    <div class="modal-content px-5 py-4 border-radius-xl shadow-sm">
+                        <div class="modal-header justify-content-center">
+                            <h6 class="text-primary">Account Activated</h6>
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <img src="./assets/images/icons/verified-email.png" width="80px" alt="">
+                            <p class="mt-4">Hello John,</p>
+                            <p>
+                                Thank you, your email has been veriﬁed. Your account is now active. Please use the link below to login to your account
+                            </p>
+                        </div>
+
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-page px-5 border-radius-xl" data-dismiss="modal">LOGIN TO YOUR ACCOUNT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MODAL VERIFIED EMAIL -->
+
+
+        </div>
 
 
 

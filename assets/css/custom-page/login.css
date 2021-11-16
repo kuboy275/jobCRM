@@ -30,7 +30,7 @@
 }
 
 .login-page .select2-results__option[aria-selected=true] {
-    background-color: #cc3234;
+    background-color: #ca3233;
     color: #091300;
 }
 
@@ -56,7 +56,7 @@
     font-size: 40px;
 }
 
-.login .login-form .form-group .form-control {
+.login .form-control {
     padding: 10px 12px 10px 50px;
     border-radius: 30px;
     border: 2px solid #afb0b0;
@@ -94,7 +94,7 @@
     color: #fff;
 }
 
-.login .login-form form .btn {
+.login form .btn {
     border-radius: 30px;
 }
 
@@ -102,4 +102,51 @@
     background-color: #fff;
     border: 2px solid #afb0b0;
     padding: 5px 12px;
+}
+
+
+/* register */
+
+.login #modal_register .modal-content {
+    min-height: 100vh;
+}
+
+.login #modal_register .form-group .form-control {
+    padding-left: 20px;
+}
+
+.login #modal_register .form-group .checker span {
+    background-color: #eaecec;
+    border-color: #eaecec;
+}
+
+.login #modal_register .form-group .checker span.checked {
+    border-color: #ca3233;
+}
+
+.login #modal_register .form-group .checker span.checked:after {
+    color: #ca3233;
+}
+
+.login #modal_register .form-group .select2 .select2-selection {
+    border-radius: 30px;
+    border: 2px solid #afb0b0;
+    color: #afb0b0;
+}
+
+.login #modal_register .form-group .select2 .select2-selection .select2-selection__rendered {
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.login-page.modal-open .select2-dropdown {
+    left: 30px;
+}
+
+#modal_verified-email.modal,
+#modal_success-message.modal {
+    top: 45%;
+    transform: translateY(-50%);
+    overflow: unset;
+    z-index: 2000;
 }

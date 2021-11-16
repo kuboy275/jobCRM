@@ -22434,6 +22434,10 @@ label.display-block {
     border-radius: 15px
 }
 
+.border-radius-xl {
+    border-radius: 30px
+}
+
 .border-radius-top {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px
