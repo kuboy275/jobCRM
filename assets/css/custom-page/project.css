@@ -1,0 +1,23 @@
+.footer-project .controls-btn {
+    margin-left: 80px;
+}
+
+.footer-project .show-upload {
+    padding-left: 80px;
+    background-color: #f6ebcd;
+}
+
+.footer-project .show-upload p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+@media (max-width:769px) {
+    .footer-project .controls-btn {
+        margin-left: 0px;
+    }
+    .footer-project .show-upload {
+        padding-left: 10px;
+        background-color: #f6ebcd;
+    }
+}

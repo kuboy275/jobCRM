@@ -15,6 +15,7 @@
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
     <link href="./assets/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/custom-page/index.css" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -28,17 +29,17 @@
     <!--  -->
     <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.time.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/legacy.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.time.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/legacy.js"></script> -->
     <!--  -->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <!--  -->
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <script type="text/javascript" src="assets/js/pages/picker_date.js"></script>
-    <script type="text/javascript" src="assets/js/charts/google/lines/area.js"></script>
+    <script type="text/javascript" src="assets/js/charts/google/lines/index-chart.js"></script>
 
 
     <!-- /theme JS files -->
@@ -69,7 +70,7 @@
         </div>
 
         <!-- <div class="navbar-collapse collapse" id="navbar-mobile">
-            <ul class="nav navbar-nav ml-40">
+            <ul class="nav navbar-nav">
                 <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
                 <li class="active">
                     <a href="index.html#" class="text-primary text-semibold">
@@ -144,7 +145,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index.html">
+                                    <a href="clients.html">
                                         <i class="fa fa-hand-spock-o"></i> <span> Clients </span>
                                     </a>
                                 </li>
@@ -160,14 +161,11 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="index.html#">
+                                    <a href="reports.html">
                                         <i class="icon-stats-growth"></i>
                                         <span>Reports</span>
                                         <i class="icon-arrow-down22"></i>
                                     </a>
-                                    <ul>
-                                        <li><a href="#">Fixed navbar</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="index.html#">
@@ -198,7 +196,7 @@
             <div class="content-wrapper bg-second">
 
                 <!-- Content area -->
-                <div class="content ml-15">
+                <div class="content">
                     <section class="dashboard">
                         <div class="header mb-5">
                             <div class="row align-items-center justify-content-between">
@@ -240,7 +238,7 @@
                                     <div class="dashboard-file bg-white p-4">
                                         <div class="d-flex align-items-center">
                                             <h5 class="my-0 mr-4 text-semibold">Quick Start</h5>
-                                            <p class="text-primary text-medium mb-0">See full file</p>
+                                            <a href="#.html" class="text-primary text-medium mb-0">See full files</a>
                                         </div>
                                         <div class="row pt-3">
                                             <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 pr-4 pr-lg-2">
@@ -270,7 +268,20 @@
                                                     <button class="btn text-primary font-10px"> <i class="icon-plus22"></i> Drop file here </button>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 pl-4 pl-lg-2">
+                                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 px-4 px-lg-2">
+                                                <div class="drop-file border">
+                                                    <div class="icon text-center py-4">
+                                                        <!-- <div class="d-flex align-items-center justify-content-center"> -->
+                                                        <img src="./assets/images/icons/translate.png" width="20px" height="20px" alt="">
+                                                        <i class="icon-plus22 text-primary font-10px mx-2 mb-n3"></i>
+                                                        <img src="./assets/images/icons/note.png" width="20px" height="20px" alt="">
+                                                        <!-- </div> -->
+                                                        <p class="mb-0 font-8px text-medium mt-3">Proof reading</p>
+                                                    </div>
+                                                    <button class="btn text-primary font-10px"> <i class="icon-plus22"></i> Drop file here </button>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-sm-12 col-md-12 col-lg-6 col-xl-3 mb-3 pl-4 pl-lg-2">
                                                 <div class="drop-file border">
                                                     <div class="icon text-center py-4">
                                                         <div class="d-flex align-items-center justify-content-center">
@@ -282,7 +293,7 @@
                                                     </div>
                                                     <button class="btn text-primary font-10px"> <i class="icon-plus22"></i> Drop file here </button>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <!-- upload file -->
                                         <div class="row">
@@ -305,7 +316,7 @@
                                                         <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/translate2.png" alt=""></div>
                                                         <div class="text text-right">
                                                             <h6 class="text-semibold font-12px my-1">305</h6>
-                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                            <p class="mb-0 font-10px text-semibold">Word processed</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -314,7 +325,7 @@
                                                         <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/note2.png" alt=""></div>
                                                         <div class="text text-right">
                                                             <h6 class="text-semibold font-12px my-1">305</h6>
-                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                            <p class="mb-0 font-10px text-semibold">Word processed</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -323,7 +334,7 @@
                                                         <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/back.png" alt=""></div>
                                                         <div class="text text-right">
                                                             <h6 class="text-semibold font-12px my-1">305</h6>
-                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                            <p class="mb-0 font-10px text-semibold">Word processed</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -332,7 +343,7 @@
                                                         <div class="icon"><img width="20px" height="20px" src="./assets/images/icons/hand-money.png" alt=""></div>
                                                         <div class="text text-white text-right">
                                                             <h6 class="text-semibold font-12px my-1">305</h6>
-                                                            <p class="mb-0 font-8px text-semibold">Word processed</p>
+                                                            <p class="mb-0 font-10px text-semibold">Word processed</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -353,8 +364,9 @@
                                     <div class="dashboard-list bg-white pl-0 p-4">
                                         <div class="d-flex align-items-center">
                                             <h5 class="my-0 mr-4 text-semibold">Your current projects</h5>
-                                            <p class="text-primary text-medium mb-0">Show full projects</p>
+                                            <a href="project.html" class="text-primary text-medium mb-0">Show full projects</a>
                                         </div>
+
                                         <!-- table responsive -->
                                         <div class="table-responsive mt-20 mb-20">
                                             <table class="table table-bordered">
@@ -375,7 +387,9 @@
                                                 <tbody class="text-semibold">
                                                     <tr>
                                                         <td class="text-primary">111</td>
-                                                        <td class="text-primary">Eugene</td>
+                                                        <td>
+                                                            <a href="project-detail.html" class="text-primary">Eugene</a>
+                                                        </td>
                                                         <td>
                                                             <div class="status d-flex align-items-center justify-content-between">
                                                                 <div class="stt-name d-flex align-items-center">
@@ -489,6 +503,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
+
                                     </div>
                                 </div>
                                 <!-- /end -->

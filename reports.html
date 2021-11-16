@@ -15,7 +15,6 @@
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./assets/css/custom.css">
-    <link rel="stylesheet" href="./assets/css/custom-page/input-styling.css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -24,16 +23,12 @@
     <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
     <!-- /core JS files -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
     <!-- Theme JS files -->
-    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_select.min.js"></script>
-
-    <!--  -->
-    <script type="text/javascript" src="assets/js/pages/form_checkbox.js"></script>
-    <script type="text/javascript" src="assets/js/pages/form_bootstrap_select.js"></script>
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <!-- /theme JS files -->
+    <script type="text/javascript" src="assets/js/charts/google/lines/reports-chart.js"></script>
 
 </head>
 
@@ -63,32 +58,15 @@
         <div class="navbar-collapse collapse" id="navbar-mobile">
             <ul class="nav navbar-nav">
                 <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
-                <li>
-                    <a href="index.html" class="text-primary text-semibold">
-                        MY TEAM
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#" class="text-primary text-semibold">
-                        MY VENDORS
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#" class="text-primary text-semibold">
-                        FIND FREELANCERS
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#" class="text-primary text-semibold">
-                        FIND A VENDOR
-                    </a>
-                </li>
                 <li class="active">
-                    <a href="team-job-board.html" class="text-primary text-semibold">
-                       JOB BOARD
+                    <a href="index.html#" class="text-primary text-semibold">
+                        REPORT
                     </a>
                 </li>
+
             </ul>
+
+
         </div>
     </div>
     <!-- /main navbar -->
@@ -147,7 +125,7 @@
                                         <li><a href="#">Fixed navbar</a></li>
                                     </ul>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="team.html">
                                         <i class="icon-users4"></i> <span> Team </span>
                                     </a>
@@ -168,15 +146,12 @@
                                         <li><a href="#">Fixed navbar</a></li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="reports.html">
                                         <i class="icon-stats-growth"></i>
                                         <span>Reports</span>
                                         <i class="icon-arrow-down22"></i>
                                     </a>
-                                    <ul>
-                                        <li><a href="#">Fixed navbar</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="index.html#">
@@ -202,111 +177,90 @@
             </div>
             <!-- /main sidebar -->
 
+
             <!-- Main content -->
-            <div class="content-wrapper bg-grey-300">
+            <div class="content-wrapper bg-white">
 
                 <!-- Content area -->
-                <div class="content">
-                    <!-- start team job board -->
-                    <div class="team-job mt-5">
-                        <div class="team-job-content bg-white border-radius-lg shadow-sm py-4">
-                            <h3 class="px-5 pb-3 border-bottom"> New Job offer </h3>
-                            <form class="px-5 mt-5">
-                                <!--  -->
-                                <div class="row">
-
-                                    <div class="col-md-12 col-lg-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="project name">
-                                        </div>
+                <div class="content mt-5">
+                    <!-- Main Reports -->
+                    <div class="reports">
+                        <div class="row mb-5">
+                            <div class="col-md-12 col-lg-4">
+                                <div class="reports-revenue">
+                                    <h3 class="my-0 mb-5">Revenue & margin reports</h3>
+                                    <div class="item-revenue mb-4 w-75 p-3 border border-lg text-grey">
+                                        <h6 class="my-0">Net sales</h6>
                                     </div>
-                                    <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <select class="bootstrap-select" data-width="100%">
-                                            <option selected> Source language</option>
-											<option value="AK">Alaska</option>
-											<option value="HI">Hawaii</option>
-										</select>
-                                        </div>
+                                    <div class="item-revenue mb-4 w-75 p-3 border border-lg text-grey">
+                                        <h6 class="my-0">Cost of goods sold</h6>
                                     </div>
-                                    <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <select class="bootstrap-select" data-width="100%">
-                                                <option selected> Target language</option>
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                            </select>
-                                        </div>
+                                    <div class="item-revenue mb-4 w-75 p-3 border border-lg text-grey">
+                                        <h6 class="my-0">Gross margin</h6>
                                     </div>
-                                    <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <select class="bootstrap-select" data-width="100%">
-                                                <option selected> Subjects</option>
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                               
-                                            </select>
-                                        </div>
+                                    <div class="item-revenue mb-4 w-75 p-3 border border-lg text-grey">
+                                        <h6 class="my-0">Margin</h6>
                                     </div>
-                                    <!--  -->
-
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-group d-flex align-items-center">
-                                            <select class="bootstrap-select pick-money mr-3" data-width="100%">
-                                                <option value="AK">$</option>
-                                            </select>
-                                            <input type="text" class="form-control " placeholder="Range rate">
-                                        </div>
-                                    </div>
-                                    <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Deadline">
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <div class="col-md-12 col-lg-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Project description (optinal)">
-                                        </div>
-                                    </div>
-                                    <!--  -->
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="styled">
-                                        Test applicants
-                                    </label>
+                            </div>
+                            <div class="col-md-12 col-lg-8">
+                                <div class="reports-charts">
+                                    <h6 class="text-grey text-center my-0">Net Sales</h6>
+                                    <div class="chart-container">
+                                        <div class="chart" id="reports-line"></div>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    <button class="text-right btn btn-page btn-sm1">POST</button>
+                            </div>
+                        </div>
+                        <!-- genereal reporst -->
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="reports-general">
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="my-0">General</h3>
+                                        <div class="form-group has-feedback has-feedback-left mb-0 w-75 ml-5">
+                                            <input type="text" class="form-control text-grey" placeholder="Search dashboards by name">
+                                            <div class="form-control-feedback">
+                                                <i class="icon-search4 text-size-base text-grey"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-lg-6 mb-4">
+                                            <button class="btn btn-page3 btn-sm2"> Account Payable </button>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <button class="btn btn-page3 btn-sm2">Overview</button>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <button class="btn btn-page3 btn-sm2">Account Receivable</button>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <button class="btn btn-page3 btn-sm2">PM Performance</button>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <button class="btn btn-page3 btn-sm2">Project Status</button>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <button class="btn btn-page3 btn-sm2">Project Status Tasks</button>
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <button class="btn btn-page3 btn-sm2">Project Status Drill-Down</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
-                    <!-- /end team job board -->
+                    <!-- /end Reports -->
                 </div>
                 <!-- /content area -->
             </div>
             <!-- /main content -->
-
-            <!-- Main sidebar right -->
-            <div class="sidebar sidebar-main sidebar-right">
-
-            </div>
-            <!-- /end sidebar right -->
         </div>
         <!-- /page content -->
     </div>
     <!-- /page container -->
-    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

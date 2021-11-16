@@ -162,6 +162,10 @@ body {
     font-size: 18px;
 }
 
+.text-unset {
+    text-transform: unset;
+}
+
 
 /* fonts */
 
@@ -199,6 +203,12 @@ body {
     font-weight: 500;
 }
 
+.btn-page3 {
+    background-color: #f6ebcd;
+    color: #000000;
+    font-weight: 500;
+}
+
 .btn-page:hover,
 .btn-page:focus {
     color: #fff;
@@ -209,9 +219,13 @@ body {
     padding: 3.2px 12px;
 }
 
-.text-unset {
-    text-transform: unset;
+.btn-sm2 {
+    border-radius: 6px;
+    padding: 6px 20px;
 }
+
+
+/* START NAVBAR */
 
 .navbar .navbar-header .navbar-brand {
     min-width: inherit;
@@ -253,6 +267,25 @@ body {
     border-bottom: 3px solid #ca3233;
 }
 
+.navbar .navbar-collapse .navbar-nav {
+    margin-left: 40px;
+}
+
+.navbar .navbar-collapse .navbar-nav li:first-child a {
+    padding-left: 0px;
+}
+
+.navbar .navbar-collapse .navbar-nav li:first-child.active a {
+    padding-left: 15px;
+}
+
+
+/* END NAVBAR TOP */
+
+.content {
+    padding: 40px;
+}
+
 .navigation li.active>.has-ul .icon-arrow-down22 {
     transform: rotate(180deg);
 }
@@ -276,10 +309,10 @@ body {
 /* END SIDER BAR RIGHT */
 
 
-/* TABLE PROJECT */
+/* TABLE  */
 
 .table-responsive::-webkit-scrollbar {
-    height: 10px;
+    height: 8px;
     background-color: #F5F5F5;
 }
 
@@ -292,6 +325,14 @@ body {
     background-color: #F5F5F5;
 }
 
+.table thead tr th:first-child {
+    border-left: none;
+}
+
+.table thead tr th:last-child {
+    border-right: none;
+}
+
 .table thead tr>th {
     font-size: 12px;
     padding: 10px 12px;
@@ -301,6 +342,7 @@ body {
     border-right: none;
     border-left: none;
     font-size: 12px;
+    padding: 4px 12px;
 }
 
 .table tbody tr td .status .stt-name .dot {
@@ -331,296 +373,50 @@ body {
     height: 12px;
 }
 
-.footer-project .controls-btn {
-    margin-left: 80px;
-}
 
-.footer-project .show-upload {
-    padding-left: 80px;
-    background-color: #f6ebcd;
-}
+/* START TAB  */
 
-.footer-project .show-upload p {
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-
-/* START LOGIN */
-
-.login {
-    /* min-height: 100vh; */
-    background-color: #670c11;
-    overflow-x: hidden;
-}
-
-.login .login-info .select2 .select2-selection {
-    background-color: #f6edce;
-    color: #091300;
-    border-radius: 5px;
-    border: none;
-    padding: 0;
-    height: 28px;
-    line-height: 28px;
-}
-
-.login-page .select2-dropdown {
-    border-radius: 10px;
-    margin-top: 10px;
-    border: 2px solid #091300;
-    background-color: #fff;
-    width: 300px!important;
-}
-
-.login-page .select2-dropdown .select2-results__options {
-    border-radius: 8px;
-    padding: 0;
-}
-
-.login-page .select2-results__option[aria-selected=true] {
-    background-color: #cc3234;
-    color: #091300;
-}
-
-.login .login-info {
-    min-height: 100vh;
-}
-
-.login .login-info .login-content {
-    margin-top: 100px;
-}
-
-.login .login-info .login-content h1 {
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-.login .login-info .login-content p {
-    font-size: 15px;
-}
-
-.login .login-info .logo {
-    font-size: 40px;
-}
-
-.login .login-form .form-group .form-control {
-    padding: 12px 12px 12px 50px;
-    border-radius: 30px;
-    border: 2px solid #afb0b0;
-    font-weight: 600;
-}
-
-.login .login-form .form-group .form-control::placeholder {
-    color: #afb0b0;
-}
-
-.login .login-form .form-group.has-feedback-left .form-control-feedback {
-    left: 10px!important;
-    top: -2px;
-}
-
-.login .login-form .form-group.has-feedback-left .form-control-feedback i {
-    font-size: 18px;
-    color: #afb0b0;
-}
-
-.login .login-form .form-group .form-control:focus {
-    border-color: #670c11;
-}
-
-.login .login-form .form-group .form-control:focus+.form-control-feedback i {
-    color: #670c11;
-}
-
-.login .login-form .form-group .checker span {
-    border-color: #375dab;
-}
-
-.login .login-form .form-group .checker span.checked {
-    background-color: #375dab;
-    color: #fff;
-}
-
-.login .login-form form .btn {
-    border-radius: 30px;
-}
-
-.login .login-form form .or-login .btn {
-    background-color: #fff;
-    border: 2px solid #afb0b0;
-}
-
-
-/* END LOGIN */
-
-
-/* START DASBOARD */
-
-
-/* .dashboard .header .header-right .pick-date .form-group .btn,
-.dashboard .header .header-right .pick-date .form-group .btn:hover {
-    background-color: #fff!important;
-} */
-
-.dashboard {
-    margin-top: -40px;
-}
-
-.dashboard .dashboard-content .dashboard-file,
-.dashboard .dashboard-content .dashboard-chart {
-    min-height: 280px;
-}
-
-.dashboard .dashboard-content .dashboard-file .drop-file button {
-    width: 100%;
-    padding: 5px 2px;
-    border-top: 1px solid #dee2e6;
-    border-radius: 0;
-}
-
-.dashboard .dashboard-content .dashboard-file .drop-file button i {
-    font-size: 8px;
-}
-
-.dashboard .dashboard-content .dashboard-file .drop-file-upload {
-    border: 1px dashed #dee2e6;
-}
-
-.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-1 {
-    background-color: #f6ebcd;
-}
-
-.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-2 {
-    background-color: #ff756f;
-}
-
-.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-3 {
-    background-color: #ca3233;
-}
-
-.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-4 {
-    background-color: #680107;
-}
-
-.dashboard .dashboard-content .dashboard-chart .quantity-list-icon {
-    position: absolute;
-    top: 0;
-    right: -15px;
-}
-
-.dashboard .dashboard-content .dashboard-list .table-bordered tbody tr td {
-    font-size: 10px;
-}
-
-.dashboard .dashboard-footer a span.quantity {
-    position: absolute;
-    bottom: 7px;
-    right: 5px;
-}
-
-
-/* END DASBOARD */
-
-
-/* START PROJECT DETAL */
-
-
-/* overview */
-
-.projects-overview .overview-content .content-detail .tabbable .nav li,
-.projects-tasks .tasks-content .tabbable .nav li {
+.tabbable .nav li {
     width: auto;
 }
 
-.projects-overview .overview-content .content-detail .tabbable .nav li a,
-.projects-tasks .tasks-content .tabbable .nav li a {
+.tabbable .nav li a {
     text-align: left;
     padding: 9px 0px;
     font-size: 15px;
 }
 
-.projects-overview .overview-content .content-detail .tabbable .nav li.active a,
-.projects-tasks .tasks-content .tabbable .nav li.active a {
+.tabbable .nav li.active a {
     color: #ca3233;
 }
 
-.projects-overview .overview-content .content-detail .tabbable .nav li.active a::after,
-.projects-tasks .tasks-content .tabbable .nav li.active a::after {
+.tabbable .nav li.active a::after {
     background-color: #ca3233;
 }
 
 
-/* /end  overview*/
+/* END TAB  */
 
 
-/* tasks */
+/* START PAGINATION */
 
-.projects-tasks .tasks-content .table tbody tr td {
-    padding: 10px 20px;
+.pagination li a {
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 2px;
+    margin-left: 4px;
 }
 
-.projects-tasks .tasks-content .modal-tasks .tab-content .form-control:focus {
-    border: 1px solid;
-}
-
-.projects-tasks .tasks-content .modal-tasks .tab-content .form-control {
-    background-color: #ddd;
-}
-
-.projects-tasks .tasks-content .modal-tasks .tab-content .form-control-feedback i,
-.projects-tasks .tasks-content .modal-tasks .tab-content .form-control,
-.projects-tasks .tasks-content .modal-tasks .tab-content .form-control::placeholder {
-    color: #888;
-    font-weight: 500;
-}
-
-
-/* /end tasks */
-
-
-/* END PROJECT DETAIL */
-
-
-/* START TEAM  */
-
-
-/* team job board */
-
-.team-job .team-job-content form .form-control::placeholder {
-    color: #cccccc;
-}
-
-.team-job .team-job-content form .form-control,
-.team-job .team-job-content form .bootstrap-select .btn {
-    border: none;
-    padding-left: 0;
-    color: #cccccc;
-    font-weight: 500;
-    border-radius: 0;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.team-job .team-job-content form .bootstrap-select .btn:focus,
-.team-job .team-job-content form .bootstrap-select .btn:focus:hover {
-    box-shadow: none;
-    background-color: #fff;
-}
-
-.team-job .team-job-content form .bootstrap-select.pick-money,
-.team-job .team-job-content form .bootstrap-select.pick-money .btn {
-    width: auto!important;
-}
-
-.team-job .team-job-content form .bootstrap-select .dropdown-menu .dropdown-menu li.selected a {
+.pagination li.active a:focus,
+.pagination li.active a:hover,
+.pagination li.active a {
     background-color: #ca3233;
+    color: #fff;
 }
 
 
-/* /end job board */
-
-
-/* END TEAM */
+/* END PAGINATION */
 
 
 /* RESONSIVE */
@@ -637,6 +433,9 @@ body {
         width: 250%;
         max-width: 250%;
     }
+    .sidebar-right {
+        display: none;
+    }
 }
 
 @media (max-width:769px) {
@@ -649,18 +448,8 @@ body {
     .navbar .navbar-collapse ul li.active::before {
         width: 100%;
     }
-    .footer-project .controls-btn {
-        margin-left: 0px;
-    }
-    .footer-project .show-upload {
-        padding-left: 10px;
-        background-color: #f6ebcd;
-    }
     .content {
         margin-left: 0!important;
         margin-right: 0!important;
-    }
-    .dashboard {
-        margin-top: 0px;
     }
 }

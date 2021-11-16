@@ -134,7 +134,7 @@ $(function() {
             // $.jGrowl('Date range has been changed', { header: 'Update', theme: 'bg-primary', position: 'center', life: 1500 });
         }
     );
-    $('.daterange-dashboard span').html(moment().subtract(29, 'days').format('MMMM D') + ' &nbsp; - &nbsp; ' + moment().format('MMMM D, YYYY'));
+    $('.daterange-dashboard span').html(moment().subtract(1, 'days').format('MMMM D') + ' &nbsp; - &nbsp; ' + moment().format('D, YYYY'));
 
     // Initialize with options
     $('.daterange-predefined').daterangepicker({

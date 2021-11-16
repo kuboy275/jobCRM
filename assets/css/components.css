@@ -362,6 +362,13 @@ a.label {
     color: #680107;
 }
 
+.navigation>li.active>a.has-ul,
+.navigation>li.active>a.has-ul:focus,
+.navigation>li.active>a.has-ul:hover {
+    background-color: #680107;
+    color: #fff;
+}
+
 .navigation>li.active>a>[class*=text-] {
     color: #fff
 }
@@ -384,7 +391,6 @@ a.label {
 .navigation>li ul li a {
     padding: 10px 20px;
     padding-left: 51px;
-    min-height: 40px
 }
 
 .navigation>li ul .navigation-header {
@@ -412,8 +418,8 @@ a.label {
 .navigation>li>ul li.active>a,
 .navigation>li>ul li.active>a:focus,
 .navigation>li>ul li.active>a:hover {
-    background-color: rgba(0, 0, 0, .2);
-    color: #fff
+    background-color: #f6ebcd;
+    color: #680107;
 }
 
 .navigation .navigation-header {
@@ -1198,10 +1204,6 @@ a.label {
     content: '';
     display: table;
     clear: both
-}
-
-.content:first-child {
-    padding-top: 20px
 }
 
 body[class*=navbar-bottom] .content {
@@ -22424,8 +22426,12 @@ label.display-block {
     border-radius: 3px
 }
 
+.border-radius-md {
+    border-radius: 10px;
+}
+
 .border-radius-lg {
-    border-radius: 10px
+    border-radius: 15px
 }
 
 .border-radius-top {
@@ -22465,7 +22471,7 @@ label.display-block {
 }
 
 .border-lg {
-    border-width: 2px
+    border-width: 2px!important;
 }
 
 .border-top-lg {

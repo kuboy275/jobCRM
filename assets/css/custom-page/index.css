@@ -1,0 +1,67 @@
+/* START DASBOARD */
+
+.dashboard {
+    margin-top: -40px;
+}
+
+.dashboard .dashboard-content .dashboard-file,
+.dashboard .dashboard-content .dashboard-chart {
+    min-height: 280px;
+}
+
+.dashboard .dashboard-content .dashboard-file .drop-file button {
+    width: 100%;
+    padding: 5px 2px;
+    border-top: 1px solid #dee2e6;
+    border-radius: 0;
+}
+
+.dashboard .dashboard-content .dashboard-file .drop-file button i {
+    font-size: 8px;
+}
+
+.dashboard .dashboard-content .dashboard-file .drop-file-upload {
+    border: 1px dashed #dee2e6;
+}
+
+.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-1 {
+    background-color: #f6ebcd;
+}
+
+.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-2 {
+    background-color: #ff756f;
+}
+
+.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-3 {
+    background-color: #ca3233;
+}
+
+.dashboard .dashboard-content .dashboard-chart .quantity .item.bg-4 {
+    background-color: #680107;
+}
+
+.dashboard .dashboard-content .dashboard-chart .quantity-list-icon {
+    position: absolute;
+    top: 0;
+    right: -15px;
+}
+
+
+/* .dashboard .dashboard-content .dashboard-list .table-bordered tbody tr td {
+    font-size: 10px;
+} */
+
+.dashboard .dashboard-footer a span.quantity {
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+}
+
+@media (max-width:769px) {
+    .dashboard {
+        margin-top: 0px;
+    }
+}
+
+
+/* END DASBOARD */

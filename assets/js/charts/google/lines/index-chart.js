@@ -35,7 +35,6 @@ function drawAreaChart() {
     var options = {
         backgroundColor: 'transparent',
         height: 170,
-        backgroundColor: 'tranparent',
         fontSize: 12,
         areaOpacity: 0,
         chartArea: {
@@ -65,7 +64,11 @@ function drawAreaChart() {
     // Draw chart
     var area_chart = new google.visualization.AreaChart($('#google-area')[0]);
     area_chart.draw(data, options);
+
+
 }
+
+
 
 
 // Resize chart

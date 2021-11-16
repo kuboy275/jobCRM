@@ -1,0 +1,23 @@
+/* tasks */
+
+.projects-tasks .tasks-content .table tbody tr td {
+    padding: 10px 20px;
+}
+
+.projects-tasks .tasks-content .modal-tasks .tab-content .form-control:focus {
+    border: 1px solid;
+}
+
+.projects-tasks .tasks-content .modal-tasks .tab-content .form-control {
+    background-color: #ddd;
+}
+
+.projects-tasks .tasks-content .modal-tasks .tab-content .form-control-feedback i,
+.projects-tasks .tasks-content .modal-tasks .tab-content .form-control,
+.projects-tasks .tasks-content .modal-tasks .tab-content .form-control::placeholder {
+    color: #888;
+    font-weight: 500;
+}
+
+
+/* /end tasks */

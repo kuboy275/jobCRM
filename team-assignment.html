@@ -15,7 +15,6 @@
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./assets/css/custom.css">
-    <link rel="stylesheet" href="./assets/css/custom-page/input-styling.css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -26,12 +25,6 @@
     <!-- /core JS files -->
 
     <!-- Theme JS files -->
-    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_select.min.js"></script>
-
-    <!--  -->
-    <script type="text/javascript" src="assets/js/pages/form_checkbox.js"></script>
-    <script type="text/javascript" src="assets/js/pages/form_bootstrap_select.js"></script>
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <!-- /theme JS files -->
 
@@ -63,32 +56,14 @@
         <div class="navbar-collapse collapse" id="navbar-mobile">
             <ul class="nav navbar-nav">
                 <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
-                <li>
-                    <a href="index.html" class="text-primary text-semibold">
-                        MY TEAM
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#" class="text-primary text-semibold">
-                        MY VENDORS
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#" class="text-primary text-semibold">
-                        FIND FREELANCERS
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html#" class="text-primary text-semibold">
-                        FIND A VENDOR
-                    </a>
-                </li>
                 <li class="active">
-                    <a href="team-job-board.html" class="text-primary text-semibold">
-                       JOB BOARD
+                    <a href="index.html" class="text-primary text-semibold">
+                        TEMPLATES
                     </a>
                 </li>
             </ul>
+
+
         </div>
     </div>
     <!-- /main navbar -->
@@ -147,10 +122,16 @@
                                         <li><a href="#">Fixed navbar</a></li>
                                     </ul>
                                 </li>
-                                <li class="active">
-                                    <a href="team.html">
-                                        <i class="icon-users4"></i> <span> Team </span>
+                                <li>
+                                    <a href="team.html" class="has-ul">
+                                        <i class="icon-users4"></i>
+                                        <span> Team</span>
+                                        <i class="icon-arrow-down22"></i>
                                     </a>
+                                    <ul>
+                                        <li><a href="team.html"> My Team </a></li>
+                                        <li class="active-sub"><a href="team-assignment.html">Assignment templates</a></li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="clients.html">
@@ -207,101 +188,46 @@
 
                 <!-- Content area -->
                 <div class="content">
-                    <!-- start team job board -->
-                    <div class="team-job mt-5">
-                        <div class="team-job-content bg-white border-radius-lg shadow-sm py-4">
-                            <h3 class="px-5 pb-3 border-bottom"> New Job offer </h3>
-                            <form class="px-5 mt-5">
-                                <!--  -->
-                                <div class="row">
-
-                                    <div class="col-md-12 col-lg-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="project name">
-                                        </div>
+                    <!-- main team -->
+                    <div class="team-assign mt-5">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-xl-8">
+                                <form class="bg-white shadow-sm  border-radius-lg p-5">
+                                    <h2 class="mb-5">Create assignment template</h2>
+                                    <!--  -->
+                                    <div class="form-group mb-4">
+                                        <label class="text-medium">Name</label>
+                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
                                     </div>
                                     <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <select class="bootstrap-select" data-width="100%">
-                                            <option selected> Source language</option>
-											<option value="AK">Alaska</option>
-											<option value="HI">Hawaii</option>
-										</select>
-                                        </div>
+                                    <div class="form-group mb-4">
+                                        <label class="text-medium">Name</label>
+                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
                                     </div>
                                     <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <select class="bootstrap-select" data-width="100%">
-                                                <option selected> Target language</option>
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                            </select>
-                                        </div>
+                                    <div class="form-group mb-4">
+                                        <label class="text-medium">Name</label>
+                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
                                     </div>
                                     <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <select class="bootstrap-select" data-width="100%">
-                                                <option selected> Subjects</option>
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                               
-                                            </select>
-                                        </div>
+                                    <div class="form-group mb-4">
+                                        <label class="text-medium">Name</label>
+                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
                                     </div>
                                     <!--  -->
-
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-group d-flex align-items-center">
-                                            <select class="bootstrap-select pick-money mr-3" data-width="100%">
-                                                <option value="AK">$</option>
-                                            </select>
-                                            <input type="text" class="form-control " placeholder="Range rate">
-                                        </div>
-                                    </div>
-                                    <!--  -->
-
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Deadline">
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                    <div class="col-md-12 col-lg-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Project description (optinal)">
-                                        </div>
-                                    </div>
-                                    <!--  -->
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="styled">
-                                        Test applicants
-                                    </label>
-                                </div>
-                                <div class="text-right">
-                                    <button class="text-right btn btn-page btn-sm1">POST</button>
-                                </div>
-                            </form>
+                                    <div class="text-right mt-5"> <button class="btn btn-page btn-sm1">Create template</button> </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <!-- /end team job board -->
+                    <!-- /end team -->
                 </div>
                 <!-- /content area -->
             </div>
             <!-- /main content -->
-
-            <!-- Main sidebar right -->
             <div class="sidebar sidebar-main sidebar-right">
 
             </div>
-            <!-- /end sidebar right -->
         </div>
         <!-- /page content -->
     </div>

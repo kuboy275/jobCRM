@@ -519,7 +519,6 @@
 .bg-grey-300 {
     background-color: #f4f4f4;
     border-color: #f4f4f4;
-    color: #fff
 }
 
 .bg-grey-400 {
@@ -1004,27 +1003,27 @@
 }
 
 .border-grey {
-    border-color: #777
+    border-color: #777!important;
 }
 
 .border-grey-300 {
-    border-color: #999
+    border-color: #999!important;
 }
 
 .border-grey-400 {
-    border-color: #888
+    border-color: #888!important;
 }
 
 .border-grey-600 {
-    border-color: #666
+    border-color: #666!important;
 }
 
 .border-grey-700 {
-    border-color: #555
+    border-color: #555!important;
 }
 
 .border-grey-800 {
-    border-color: #444
+    border-color: #444!important;
 }
 
 .border-slate {

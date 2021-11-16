@@ -1,0 +1,38 @@
+/* team job board */
+
+form .form-control::placeholder {
+    color: #cccccc;
+}
+
+form .form-control,
+form .bootstrap-select .btn {
+    border: none;
+    padding-left: 0;
+    color: #cccccc;
+    font-weight: 500;
+    border-radius: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+form .bootstrap-select .btn:focus,
+form .bootstrap-select .btn:focus:hover {
+    box-shadow: none;
+    background-color: #fff;
+}
+
+form .bootstrap-select.pick-money,
+form .bootstrap-select.pick-money .btn {
+    width: auto!important;
+}
+
+form .bootstrap-select .dropdown-menu {
+    padding: 0px;
+    margin-top: 5px;
+}
+
+form .bootstrap-select .dropdown-menu .dropdown-menu li.selected a {
+    background-color: #ca3233;
+}
+
+
+/* /end job board */
