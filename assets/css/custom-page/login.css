@@ -107,6 +107,10 @@
 
 /* register */
 
+.login #modal_register {
+    background-color: rgba(0, 0, 0, .4);
+}
+
 .login #modal_register .modal-content {
     min-height: 100vh;
 }
@@ -143,10 +147,15 @@
     left: 30px;
 }
 
-#modal_verified-email.modal,
-#modal_success-message.modal {
-    top: 45%;
-    transform: translateY(-50%);
-    overflow: unset;
-    z-index: 2000;
+.login #modal_verified-email.modal,
+.login #modal_success-message.modal {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.login #modal_verified-email.modal .modal-dialog,
+.login #modal_success-message.modal .modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
