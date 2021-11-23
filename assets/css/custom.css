@@ -162,6 +162,10 @@ body {
     font-size: 18px;
 }
 
+.font-30px {
+    font-size: 30px;
+}
+
 .text-unset {
     text-transform: unset;
 }
@@ -209,8 +213,22 @@ body {
     font-weight: 500;
 }
 
-.btn-page:hover,
-.btn-page:focus {
+.btn-page4 {
+    background-color: #681316;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn:hover,
+.btn:focus {
+    color: initial;
+}
+
+.btn-page:hover {
+    color: #fff;
+}
+
+.btn-page4:hover {
     color: #fff;
 }
 
@@ -222,6 +240,11 @@ body {
 .btn-sm2 {
     border-radius: 6px;
     padding: 6px 20px;
+}
+
+.btn-lg {
+    border-radius: 10px;
+    padding: 10px 30px;
 }
 
 
@@ -419,6 +442,101 @@ body {
 /* END PAGINATION */
 
 
+/* START CUSTOM DATA TABLE */
+
+.dataTable thead tr {
+    background-color: #fff;
+}
+
+.dataTable thead tr th {
+    padding: 8px 15px 8px 12px!important;
+    border: 1px solid #ddd!important;
+    color: #bbb;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dataTable thead .sorting_asc::after,
+.dataTable thead .sorting_desc::after,
+.dataTable thead .sorting::before,
+.dataTable thead .sorting::after {
+    right: 10px;
+    color: #bbb;
+}
+
+.dataTable thead .sorting_desc::after {
+    content: '\e9c1';
+    margin-top: 0;
+}
+
+.dataTable thead .sorting_desc::before {
+    content: '\e9c2';
+    font-family: icomoon;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 12px;
+    margin-top: -12px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.dataTable thead .sorting_asc::before {
+    content: '\e9c1';
+    font-family: icomoon;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 12px;
+    margin-top: 0px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.dataTable thead .sorting_asc::after,
+.dataTable thead .sorting::after {
+    margin-top: -12px;
+}
+
+.dataTable thead .sorting_asc::before,
+.dataTable thead .sorting::before {
+    margin-top: 0px;
+}
+
+.dataTable tbody tr td {
+    background-color: #fff;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+
+/* END CUSTOM DATA TABLE */
+
+
+/* START CUSSTOM BOOTSTRAP SELECT */
+
+.bootstrap__select-custom .btn-group .btn {
+    color: #bbb;
+    padding: 5px 35px 5px 15px;
+}
+
+.bootstrap__select-custom .btn-group .dropdown-menu {
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.bootstrap__select-custom .btn-group .dropdown-menu ul {
+    margin-top: 0;
+}
+
+.bootstrap__select-custom .btn-group .dropdown-menu ul li.selected a {
+    background-color: #ca3233;
+}
+
+
+/* END CUSSTOM BOOTSTRAP SELECT */
+
+
 /* RESONSIVE */
 
 @media (max-width:1200px) {
@@ -449,6 +567,7 @@ body {
         width: 100%;
     }
     .content {
+        padding: 10px;
         margin-left: 0!important;
         margin-right: 0!important;
     }

@@ -22426,12 +22426,16 @@ label.display-block {
     border-radius: 3px
 }
 
+.border-radius-sm {
+    border-radius: 5px;
+}
+
 .border-radius-md {
     border-radius: 10px;
 }
 
 .border-radius-lg {
-    border-radius: 15px
+    border-radius: 15px!important;
 }
 
 .border-radius-xl {
@@ -22463,7 +22467,7 @@ label.display-block {
 }
 
 .border-bottom {
-    border-bottom: 1px solid
+    border-bottom: 1px solid;
 }
 
 .border-left {

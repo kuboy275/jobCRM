@@ -4,6 +4,12 @@
     color: #fff
 }
 
+.bg-primary-300 {
+    background-color: #ff756f;
+    border-color: #ff756f;
+    color: #fff
+}
+
 .bg-second {
     background-color: #f6ebcd;
 }
@@ -12,14 +18,8 @@
     background-color: #680107;
 }
 
-.text-second {
+.text-third {
     color: #681316;
-}
-
-.bg-primary-300 {
-    background-color: #64b5f6;
-    border-color: #64b5f6;
-    color: #fff
 }
 
 .bg-primary-400 {
@@ -1011,7 +1011,7 @@
 }
 
 .border-grey-300 {
-    border-color: #999!important;
+    border-color: #e5e5e5!important;
 }
 
 .border-grey-400 {
@@ -3133,7 +3133,7 @@
 .text-grey-400,
 .text-grey-400:focus,
 .text-grey-400:hover {
-    color: #888!important
+    color: #bbb!important
 }
 
 .text-grey-600,
