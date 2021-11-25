@@ -1,0 +1,11 @@
+.payment-bill form .form-control,
+.payment-bill form .bootstrap__select-custom .btn,
+.payment-bill form .form-control::placeholder {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    padding-left: 0;
+    color: #bbb;
+    height: 36px;
+    font-weight: 500;
+}

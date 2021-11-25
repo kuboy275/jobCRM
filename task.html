@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+    <!-- Global stylesheets -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/custom-page/task.css">
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <!-- /core JS files -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_select.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/form_bootstrap_select.js"></script>
+
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/pages/form_checkbox.js"></script>
+    <script type="text/javascript" src="assets/js/custom/task.js"></script>
+    <script type="text/javascript" src="assets/js/custom/task-chart-pending.js"></script>
+    <script type="text/javascript" src="assets/js/custom/task-chart-processing.js"></script>
+    <script type="text/javascript" src="assets/js/custom/task-chart-completed.js"></script>
+    <!-- /theme JS files -->
+
+</head>
+
+<body>
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-default header-highlight bg-second">
+        <div class="navbar-header bg-primary">
+            <div class="navbar-brand text-white text-semibold d-flex justify-content-between align-items-center" href="index.html">
+                <a href="index.html" class="text-white">
+                    <div class="nav-account">
+                        <span class="avatar mr-1"> AN </span>
+                        <span class="name">an nguyen</span>
+                    </div>
+                </a>
+                <div class="noti">
+                    <span class="number mr-1">9</span>
+                    <i class="fa fa-lg fa-angle-double-down"></i>
+                </div>
+            </div>
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-menu2"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav">
+                <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
+                <li class="active">
+                    <a href="project.html" class="text-primary text-semibold">
+                        TASK MANAGEMENT
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-main">
+                <div class="sidebar-content">
+                    <!-- User menu -->
+                    <div class="sidebar-user">
+                        <div class="category-content">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h3 class="media-heading text-semibold">Tomato Media</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /user menu -->
+                    <!-- Main navigation -->
+                    <div class="sidebar-category sidebar-category-visible">
+                        <div class="category-content no-padding">
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <!-- Main -->
+                                <li>
+                                    <a href="project.html" class="has-create">
+                                        <i class="icon-folder-minus4"></i> <span> Projects </span>
+                                        <i class="icon-plus3"></i>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="task.html" class="has-create">
+                                        <i class=" icon-file-text2"></i> <span> My tasks </span>
+                                        <i class="icon-plus3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html">
+                                        <i class="icon-folder-search"></i> <span> Available jobs </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-newspaper2"></i>
+                                        <span>Linguistic assets</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                    <ul>
+                                        <li class="active-sub"><a href="linguistic-glossaries.html">Glossaries</a></li>
+                                        <li><a href="linguistic-translation.html">Translation Memories</a></li>
+
+                                        <li class="active-sub"><a href="linguistic-global.html">Global Search</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="team.html">
+                                        <i class="icon-users4"></i> <span> Team </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="clients.html">
+                                        <i class="fa fa-hand-spock-o"></i> <span> Clients </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-credit-card"></i>
+                                        <span>Payments</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="payment-supplier.html">Supplier payments</a></li>
+                                        <li class="active-sub"><a href="payment-setting.html">Settings & balance</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="reports.html">
+                                        <i class="icon-stats-growth"></i>
+                                        <span>Reports</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#">
+                                        <i class=" icon-gear"></i>
+                                        <span>Setting</span>
+                                        <i class="icon-arrow-down22"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="#">Fixed navbar</a></li>
+                                    </ul>
+                                </li>
+                                <!-- /main -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /main navigation -->
+                </div>
+                <!-- main logo -->
+                <div class="sidebar-logo bg-primary">
+                    <h5 class="text-bold">LOGO</h5>
+                </div>
+                <!-- /main logo -->
+            </div>
+            <!-- /main sidebar -->
+
+
+            <!-- Main content -->
+            <div class="content-wrapper bg-white">
+
+                <!-- Content area -->
+                <div class="content">
+                    <!-- Main Tasks -->
+                    <div class="task">
+
+                        <!-- TASK CHART -->
+                        <div class="task-chart">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-4 mb-5">
+                                    <div class="chart-item pending p-4">
+                                        <div class="quantity text-semibold text-white">
+                                            <h5 class="mb-1">12</h5>
+                                            <p class="mb-0">Pending Tasks</p>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="chart" id="task-chart-pending"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12 col-xl-4 mb-5">
+                                    <div class="chart-item processing p-4">
+                                        <div class="quantity text-semibold">
+                                            <h5 class="mb-1">12</h5>
+                                            <p class="mb-0">Processing Tasks</p>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="chart" id="task-chart-processing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12 col-xl-4 mb-5">
+                                    <div class="chart-item completed p-4">
+                                        <div class="quantity text-semibold">
+                                            <h5 class="mb-1">12</h5>
+                                            <p class="mb-0">Completed Tasks</p>
+                                        </div>
+                                        <div class="chart-container">
+                                            <div class="chart" id="task-chart-completed"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /end Task Chart -->
+
+                        <!-- TASK FILTER -->
+                        <div class="task-filter mb-5">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-sm-12 col-md-10 pr-0">
+                                    <form action="" class="border p-2 d-flex align-items-center">
+                                        <p class="mb-0 ml-3 mr-5 text-grey-400 text-medium">Filter</p>
+                                        <div class="form-group bootstrap__select-custom mb-0">
+                                            <select class="bootstrap-select" data-width="100%">
+                                                <option value="AK">By date</option>
+                                                <option value="HI">Hawaii</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group bootstrap__select-custom mb-0">
+                                            <select class="bootstrap-select" data-width="100%">
+                                                <option value="AK">By status</option>
+                                                <option value="HI">Hawaii</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group bootstrap__select-custom mb-0">
+                                            <select class="bootstrap-select" data-width="100%">
+                                                <option value="AK">By priority</option>
+                                                <option value="HI">Hawaii</option>
+                                            </select>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="col-sm-12 col-md-2 text-right">
+                                    <button class="btn btn-page btn-sm1">CREATE TASK</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /end Task filter -->
+
+                        <!-- TASK LIST -->
+                        <div class="task-list">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="task-box">
+                                        <!-- header -->
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <p class="my-0 text-primary text-semibold">TASK</p>
+                                            <a href="#!" class="text-primary font-12px"> See all </a>
+                                        </div>
+                                        <!-- content -->
+                                        <div class="box-item mb-3 high">
+                                            <span class="status">High</span>
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <!-- Checkbox -->
+                                                <div class="form-group mb-0">
+                                                    <label class="checkbox-inline checkbox-left">
+                                                        <input type="checkbox" class="styled check-task" >
+                                                    </label>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-content">
+                                                    <p> Xây dựng nội dung ABC</p>
+                                                    <div>
+                                                        <span class="mr-3"> 
+                                                            <i class="glyphicon glyphicon-paperclip"></i>
+                                                            0 
+                                                        </span>
+                                                        <span> 
+                                                            <i class="fa fa-commenting"></i>
+                                                            0
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-info text-right">
+                                                    <span class="name bg-primary-300">AN</span>
+                                                    <div class="date">01/08/2021 - 03/08/2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-item mb-3 low">
+                                            <span class="status">Low</span>
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <!-- Checkbox -->
+                                                <div class="form-group mb-0">
+                                                    <label class="checkbox-inline checkbox-left">
+                                                        <input type="checkbox" class="styled check-task" >
+                                                    </label>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-content">
+                                                    <p> Xây dựng nội dung ABC</p>
+                                                    <div>
+                                                        <span class="mr-3"> 
+                                                            <i class="glyphicon glyphicon-paperclip"></i>
+                                                            0 
+                                                        </span>
+                                                        <span> 
+                                                            <i class="fa fa-commenting"></i>
+                                                            0
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-info text-right">
+                                                    <span class="name bg-primary-300">AN</span>
+                                                    <div class="date">01/08/2021 - 03/08/2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- box button -->
+                                        <div class="box-btn text-right ">
+                                            <button class="btn btn-page btn-sm1  font-8px px-2">
+                                                DELETE
+                                            </button>
+                                            <button class="btn btn-page btn-sm1 ml-2  font-8px px-2">
+                                                DONE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="task-box">
+                                        <!-- header -->
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <p class="my-0 text-primary text-semibold">TASK</p>
+                                            <a href="#!" class="text-primary font-12px"> See all </a>
+                                        </div>
+                                        <!-- content -->
+                                        <div class="box-item mb-3 high">
+                                            <span class="status">High</span>
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <!-- Checkbox -->
+                                                <div class="form-group mb-0">
+                                                    <label class="checkbox-inline checkbox-left">
+                                                        <input type="checkbox" class="styled check-task" >
+                                                    </label>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-content">
+                                                    <p> Xây dựng nội dung ABC</p>
+                                                    <div>
+                                                        <span class="mr-3"> 
+                                                            <i class="glyphicon glyphicon-paperclip"></i>
+                                                            0 
+                                                        </span>
+                                                        <span> 
+                                                            <i class="fa fa-commenting"></i>
+                                                            0
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-info text-right">
+                                                    <span class="name bg-primary-300">AN</span>
+                                                    <div class="date">01/08/2021 - 03/08/2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-item mb-3 medium">
+                                            <span class="status">Medium</span>
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <!-- Checkbox -->
+                                                <div class="form-group mb-0">
+                                                    <label class="checkbox-inline checkbox-left">
+                                                        <input type="checkbox" class="styled check-task" >
+                                                    </label>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-content">
+                                                    <p> Xây dựng nội dung ABC</p>
+                                                    <div>
+                                                        <span class="mr-3"> 
+                                                            <i class="glyphicon glyphicon-paperclip"></i>
+                                                            0 
+                                                        </span>
+                                                        <span> 
+                                                            <i class="fa fa-commenting"></i>
+                                                            0
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-info text-right">
+                                                    <span class="name bg-primary-300">AN</span>
+                                                    <div class="date">01/08/2021 - 03/08/2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- box button -->
+                                        <div class="box-btn text-right ">
+                                            <button class="btn btn-page btn-sm1  font-8px px-2">
+                                                DELETE
+                                            </button>
+                                            <button class="btn btn-page btn-sm1 ml-2  font-8px px-2">
+                                                DONE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="task-box">
+                                        <!-- header -->
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <p class="my-0 text-primary text-semibold">TASK</p>
+                                            <a href="#!" class="text-primary font-12px"> See all </a>
+                                        </div>
+                                        <!-- content -->
+                                        <div class="box-item mb-3 high">
+                                            <span class="status">High</span>
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <!-- Checkbox -->
+                                                <div class="form-group mb-0">
+                                                    <label class="checkbox-inline checkbox-left">
+                                                        <input type="checkbox" class="styled check-task" >
+                                                    </label>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-content">
+                                                    <p> Xây dựng nội dung ABC</p>
+                                                    <div>
+                                                        <span class="mr-3"> 
+                                                            <i class="glyphicon glyphicon-paperclip"></i>
+                                                            0 
+                                                        </span>
+                                                        <span> 
+                                                            <i class="fa fa-commenting"></i>
+                                                            0
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-info text-right">
+                                                    <span class="name bg-primary-300">AN</span>
+                                                    <div class="date">01/08/2021 - 03/08/2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-item mb-3 low">
+                                            <span class="status">Low</span>
+                                            <div class="d-flex align-items-start justify-content-between">
+                                                <!-- Checkbox -->
+                                                <div class="form-group mb-0">
+                                                    <label class="checkbox-inline checkbox-left">
+                                                        <input type="checkbox" class="styled check-task" >
+                                                    </label>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-content">
+                                                    <p> Xây dựng nội dung ABC</p>
+                                                    <div>
+                                                        <span class="mr-3"> 
+                                                            <i class="glyphicon glyphicon-paperclip"></i>
+                                                            0 
+                                                        </span>
+                                                        <span> 
+                                                            <i class="fa fa-commenting"></i>
+                                                            0
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="box-info text-right">
+                                                    <span class="name bg-primary-300">AN</span>
+                                                    <div class="date">01/08/2021 - 03/08/2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- box button -->
+                                        <div class="box-btn text-right ">
+                                            <button class="btn btn-page btn-sm1  font-8px px-2">
+                                                DELETE
+                                            </button>
+                                            <button class="btn btn-page btn-sm1 ml-2  font-8px px-2">
+                                                DONE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /end Task list -->
+                    </div>
+                    <!-- /main Tasks -->
+                </div>
+                <!-- /content area -->
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- /page container -->
+</body>
+
+</html>

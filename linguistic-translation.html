@@ -15,6 +15,7 @@
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/custom-page/project.css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -23,9 +24,12 @@
     <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
     <!-- /core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
 
     <!-- Theme JS files -->
     <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/custom/datatables_translation.js"></script>
+
     <!-- /theme JS files -->
 
 </head>
@@ -57,8 +61,8 @@
             <ul class="nav navbar-nav">
                 <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
                 <li class="active">
-                    <a href="index.html" class="text-primary text-semibold">
-                        TEMPLATES
+                    <a href="linguistic-glossaries.html" class="text-primary text-semibold">
+                        TRANSLATION MEMORIES
                     </a>
                 </li>
             </ul>
@@ -118,22 +122,15 @@
                                         <i class="icon-arrow-down22"></i>
                                     </a>
                                     <ul>
-                                        <li class="active-sub"><a href="linguistic-glossaries.html">Glossaries</a></li>
-                                        <li><a href="linguistic-translation.html">Translation Memories</a></li>
-
+                                        <li><a href="linguistic-glossaries.html">Glossaries</a></li>
+                                        <li class="active-sub"><a href="linguistic-translation.html">Translation Memories</a></li>
                                         <li class="active-sub"><a href="linguistic-global.html">Global Search</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="team.html" class="has-ul">
-                                        <i class="icon-users4"></i>
-                                        <span> Team</span>
-                                        <i class="icon-arrow-down22"></i>
+                                    <a href="team.html">
+                                        <i class="icon-users4"></i> <span> Team </span>
                                     </a>
-                                    <ul>
-                                        <li><a href="team.html"> My Team </a></li>
-                                        <li class="active-sub"><a href="team-assignment.html">Assignment templates</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="clients.html">
@@ -157,9 +154,6 @@
                                         <span>Reports</span>
                                         <i class="icon-arrow-down22"></i>
                                     </a>
-                                    <ul>
-                                        <li><a href="#">Fixed navbar</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="index.html#">
@@ -185,56 +179,64 @@
             </div>
             <!-- /main sidebar -->
 
+
             <!-- Main content -->
             <div class="content-wrapper bg-grey-300">
 
                 <!-- Content area -->
                 <div class="content">
-                    <!-- main team -->
-                    <div class="team-assign mt-5">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 col-xl-8">
-                                <form class="bg-white shadow-sm  border-radius-lg p-5">
-                                    <h2 class="mb-5">Create assignment template</h2>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
-                                    </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
-                                    </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
-                                    </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
-                                    </div>
-                                    <!--  -->
-                                    <div class="text-right mt-5"> <button class="btn btn-page btn-sm1">Create template</button> </div>
-                                </form>
+                    <!-- start  Glossaries -->
+                    <div class="translation">
+                        <div class="translation-controls d-flex align-items-center justify-content-between mb-4">
+                            <button class="btn btn-page btn-sm1">CREATE TM</button>
+                            <div class="d-flex align-items-center">
+                                <div class="form-group mb-0 d-flex align-items-center">
+                                    <input type="text" class="form-control h-100 font-12px" placeholder="Right smaller icon">
+                                    <button class="btn btn-page btn-sm1 ml-2">
+                                        <i class="icon-search4 text-size-base"></i>
+                                    </button>
+                                </div>
+                                <button class="btn btn-page btn-sm1 ml-3">FILTER</button>
+                            </div>
+                        </div>
+                        <div class="glo-data">
+                            <div class="table-responsive">
+                                <table class="table table-bordered datatable-translation">
+                                    <thead>
+                                        <tr>
+                                            <th>TM name</th>
+                                            <th>Languages </th>
+                                            <th>Creted by</th>
+                                            <th>Created</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>English</td>
+                                            <td>en > vi</td>
+                                            <td>anh nguyen</td>
+                                            <td>08/03/2021</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <!-- /end team -->
+                    <!-- /end   Glossaries -->
                 </div>
                 <!-- /content area -->
             </div>
             <!-- /main content -->
+
+            <!-- sider right -->
             <div class="sidebar sidebar-main sidebar-right">
 
             </div>
+            <!-- /sider right -->
         </div>
         <!-- /page content -->
     </div>
     <!-- /page container -->
-    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

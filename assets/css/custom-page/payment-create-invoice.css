@@ -1,0 +1,26 @@
+.create-invoice form .enter-invoice .bootstrap__select-custom .btn {
+    padding: 7px 12px;
+}
+
+.create-invoice form .enter-invoice .form-control,
+.create-invoice form .enter-invoice .bootstrap__select-custom .btn {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    padding-left: 0;
+    color: #bbb;
+    height: 36px;
+}
+
+.create-invoice .payment-history .table thead {
+    color: #bbb;
+}
+
+.create-invoice .payment-history .table thead tr th {
+    border-bottom-color: #ddd;
+}
+
+.create-invoice .payment-history .table tbody tr td {
+    font-weight: 500;
+    padding: 8px 12px;
+}

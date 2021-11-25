@@ -15,6 +15,7 @@
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/custom-page/payment-create-invoice.css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -23,9 +24,14 @@
     <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
     <!-- /core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_select.min.js"></script>
 
     <!-- Theme JS files -->
     <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/pages/form_bootstrap_select.js"></script>
+
+
+
     <!-- /theme JS files -->
 
 </head>
@@ -57,8 +63,23 @@
             <ul class="nav navbar-nav">
                 <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
                 <li class="active">
-                    <a href="index.html" class="text-primary text-semibold">
-                        TEMPLATES
+                    <a href="payment-supplier.html" class="text-primary text-semibold">
+                        JOB
+                    </a>
+                </li>
+                <li>
+                    <a href="payment-supplier.html" class="text-primary text-semibold">
+                        IMPORT
+                    </a>
+                </li>
+                <li>
+                    <a href="payment-supplier.html" class="text-primary text-semibold">
+                        INVOICES
+                    </a>
+                </li>
+                <li>
+                    <a href="payment-supplier.html" class="text-primary text-semibold">
+                        PAYMENT SETTINGS
                     </a>
                 </li>
             </ul>
@@ -118,22 +139,15 @@
                                         <i class="icon-arrow-down22"></i>
                                     </a>
                                     <ul>
-                                        <li class="active-sub"><a href="linguistic-glossaries.html">Glossaries</a></li>
-                                        <li><a href="linguistic-translation.html">Translation Memories</a></li>
-
+                                        <li><a href="linguistic-glossaries.html">Glossaries</a></li>
+                                        <li class="active-sub"><a href="linguistic-translation.html">Translation Memories</a></li>
                                         <li class="active-sub"><a href="linguistic-global.html">Global Search</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="team.html" class="has-ul">
-                                        <i class="icon-users4"></i>
-                                        <span> Team</span>
-                                        <i class="icon-arrow-down22"></i>
+                                    <a href="team.html">
+                                        <i class="icon-users4"></i> <span> Team </span>
                                     </a>
-                                    <ul>
-                                        <li><a href="team.html"> My Team </a></li>
-                                        <li class="active-sub"><a href="team-assignment.html">Assignment templates</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="clients.html">
@@ -157,9 +171,6 @@
                                         <span>Reports</span>
                                         <i class="icon-arrow-down22"></i>
                                     </a>
-                                    <ul>
-                                        <li><a href="#">Fixed navbar</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="index.html#">
@@ -185,56 +196,146 @@
             </div>
             <!-- /main sidebar -->
 
+
             <!-- Main content -->
-            <div class="content-wrapper bg-grey-300">
+            <div class="content-wrapper bg-white">
 
                 <!-- Content area -->
                 <div class="content">
-                    <!-- main team -->
-                    <div class="team-assign mt-5">
+                    <!-- start  payments create invoice -->
+                    <div class="create-invoice">
                         <div class="row">
-                            <div class="col-md-12 col-lg-12 col-xl-8">
-                                <form class="bg-white shadow-sm  border-radius-lg p-5">
-                                    <h2 class="mb-5">Create assignment template</h2>
+                            <div class="col-md-12 col-lg-10">
+                                <h3 class="border-bottom border-grey-300">Create invoice</h3>
+                                <!-- FORM SUBMIT -->
+                                <form action="" class="mt-5">
                                     <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
+                                    <div class="form-group">
+                                        <label class="text-grey text-medium"> Project </label>
+                                        <input type="text" class="form-control">
                                     </div>
                                     <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label class="text-grey text-medium"> Total revenue </label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--  -->
+
+                                        <div class="col-md-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label class="text-grey text-medium"> Deposit </label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--  -->
+
+                                        <div class="col-md-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label class="text-grey text-medium"> Debt </label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
+                                    <!-- enter invoice detail -->
+                                    <h4 class="text-primary">ENTER INVOICE DETAIL</h4>
+                                    <div class="enter-invoice">
+                                        <div class="row mt-5">
+                                            <div class="col-md-12 col-lg-4 mb-4">
+                                                <button class="btn btn-page btn-lg w-100">DEPOSIT RECEIPT</button>
+                                            </div>
+                                            <div class="col-md-12 col-lg-4 mb-4">
+                                                <button class="btn btn-page btn-lg w-100">PAYMENT RECEIPT</button>
+                                            </div>
+                                            <div class="col-md-12 col-lg-4 mb-4">
+                                                <button class="btn btn-page btn-lg w-100">FULL PAYMENT RECEIPT</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-4">
+                                            <div class="col-md-12 col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Amount">
+                                                </div>
+                                            </div>
+                                            <!--  -->
+
+                                            <div class="col-md-12 col-lg-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Payment time">
+                                                </div>
+                                            </div>
+                                            <!--  -->
+
+                                            <div class="col-md-12 col-lg-4">
+                                                <div class="form-group bootstrap__select-custom">
+                                                    <select class="bootstrap-select" data-width="100%">
+                                                        <option value="AK">Credited account</option>
+                                                        <option value="HI">Hawaii</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Accountant note">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
+                                    <div class="text-right mt-4">
+                                        <button type="reset" class="btn btn-sm1 bg-transparent text-primary">CANCLE</button>
+                                        <button type="submit" class="btn btn-page btn-sm1">CREATE</button>
                                     </div>
-                                    <!--  -->
-                                    <div class="text-right mt-5"> <button class="btn btn-page btn-sm1">Create template</button> </div>
                                 </form>
+                                <!-- /end FORM SUBMIT -->
+                                <!-- PAYMENT HISTORY -->
+                                <div class="payment-history mt-5">
+                                    <h3 class="text-primary">PAYMENT HISTORYS</h3>
+                                    <div class="table-responsive mt-5">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Time</th>
+                                                    <th>Amount in USD</th>
+                                                    <th>Amount in VND</th>
+                                                    <th>Credited Account</th>
+                                                    <th>Accountant Note</th>
+                                                    <th>System Note</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td>7</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /end PAYMENT HISTORY -->
                             </div>
                         </div>
                     </div>
-                    <!-- /end team -->
+                    <!-- /end   payments create invoice -->
                 </div>
                 <!-- /content area -->
             </div>
             <!-- /main content -->
-            <div class="sidebar sidebar-main sidebar-right">
 
-            </div>
         </div>
         <!-- /page content -->
     </div>
+
     <!-- /page container -->
-    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

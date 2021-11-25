@@ -11,8 +11,6 @@
 
 $(function() {
 
-    $(".styled, .multiselect-container input").uniform({
-        radioClass: 'choice'
-    });
+    $(".styled:checkbox").uniform();
 
 });

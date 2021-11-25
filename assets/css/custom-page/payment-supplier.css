@@ -1,0 +1,21 @@
+.payments-supp .payments__supp--controls .form-group {
+    padding-left: 13px;
+}
+
+.payments-supp .payments__supp--controls .form-group label {
+    font-weight: 600;
+}
+
+.payments-supp .form-group .checker span {
+    border-color: #000;
+}
+
+.payments-supp .table thead tr th:first-child {
+    width: 5px;
+    border-right: none!important;
+}
+
+.payments-supp .table thead tr th {
+    border-left: none!important;
+    border-right: none!important;
+}

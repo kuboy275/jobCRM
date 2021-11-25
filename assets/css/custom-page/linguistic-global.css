@@ -1,0 +1,18 @@
+.global .form-group {
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+
+/* .global .form-group .form-control{
+    padding: ;
+} */
+
+.global .form-group .btn {
+    padding: 3.2px 8px;
+    border-radius: 0;
+}
+
+.global .global-pick .bootstrap__select-custom span.caret {
+    color: #000;
+}

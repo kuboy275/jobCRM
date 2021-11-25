@@ -1,0 +1,139 @@
+/* TASK CHART */
+
+.task .task-chart .chart-item.pending {
+    background-color: #ca3233;
+}
+
+.task .task-chart .chart-item.processing {
+    background-color: #ff756f;
+}
+
+.task .task-chart .chart-item.completed {
+    background-color: #f6ebcd;
+}
+
+
+/* TASK FILTER */
+
+.task .task-filter .form-group {
+    margin-right: 15px;
+}
+
+.task .task-filter .form-group .btn-group {
+    width: auto!important;
+}
+
+.task .task-filter .form-group .btn {
+    border: none;
+    padding: 0 30px 0 10px;
+}
+
+
+/* TASK LIST */
+
+.task .task-list .task-box {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid #e5e5e5;
+    transition: all .2s ease;
+}
+
+.task .task-list .task-box .box-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    position: relative;
+    padding: 25px 10px 10px 10px;
+    background-color: #fff;
+}
+
+.task .task-list .task-box .box-item .status {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    padding: 3px 5px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 10px;
+    color: #fff;
+}
+
+.task .task-list .task-box .box-item.high .status {
+    background-color: #ca3233;
+}
+
+.task .task-list .task-box .box-item.low .status {
+    background-color: #00afe5;
+}
+
+.task .task-list .task-box .box-item.medium .status {
+    background-color: #ffc91d;
+    color: #680107;
+}
+
+.task .task-list .task-box .box-item .form-group {
+    margin-top: -15px;
+}
+
+.task .task-list .task-box .box-item .form-group .checker span {
+    border-radius: 50%;
+    border-color: #000;
+    width: 20px;
+    height: 20px;
+}
+
+.task .task-list .task-box .box-item .form-group .checker span.checked {
+    background-color: #ca3233;
+    border-color: #ca3233;
+    color: #fff;
+}
+
+.task .task-list .task-box .box-item .form-group .checker span.checked::after {
+    top: 0;
+    left: 0;
+}
+
+.task .task-list .task-box .box-item .box-content p {
+    font-weight: 600;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.task .task-list .task-box .box-item .box-content span i {
+    font-size: 10px;
+}
+
+.task .task-list .task-box .box-item .box-info {
+    margin-top: -15px;
+}
+
+.task .task-list .task-box .box-item .box-info .name {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.task .task-list .task-box .box-item .box-info .date {
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.task .task-list .task-box .box-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.task .task-list .task-box.active {
+    background-color: #f6ebcd;
+}
+
+.task .task-list .task-box.active .box-btn {
+    opacity: 1;
+    visibility: visible;
+}

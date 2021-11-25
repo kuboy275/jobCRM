@@ -23,8 +23,11 @@
     <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
     <!-- /core JS files -->
-
     <!-- Theme JS files -->
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_select.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/pages/form_bootstrap_select.js"></script>
+
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <!-- /theme JS files -->
 
@@ -57,10 +60,16 @@
             <ul class="nav navbar-nav">
                 <!-- <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li> -->
                 <li class="active">
-                    <a href="index.html" class="text-primary text-semibold">
-                        TEMPLATES
+                    <a href="payment-setting.html" class="text-primary text-semibold">
+                        BILLING DETAILS
                     </a>
                 </li>
+                <li class="">
+                    <a href="payment-detail.html" class="text-primary text-semibold">
+                        DIRECT PAYMENT DETAILS
+                    </a>
+                </li>
+
             </ul>
 
 
@@ -94,7 +103,7 @@
                         <div class="category-content no-padding">
                             <ul class="navigation navigation-main navigation-accordion">
                                 <!-- Main -->
-                                <li>
+                                <li class="active">
                                     <a href="project.html" class="has-create">
                                         <i class="icon-folder-minus4"></i> <span> Projects </span>
                                         <i class="icon-plus3"></i>
@@ -125,15 +134,9 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="team.html" class="has-ul">
-                                        <i class="icon-users4"></i>
-                                        <span> Team</span>
-                                        <i class="icon-arrow-down22"></i>
+                                    <a href="team.html">
+                                        <i class="icon-users4"></i> <span> Team </span>
                                     </a>
-                                    <ul>
-                                        <li><a href="team.html"> My Team </a></li>
-                                        <li class="active-sub"><a href="team-assignment.html">Assignment templates</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="clients.html">
@@ -157,9 +160,6 @@
                                         <span>Reports</span>
                                         <i class="icon-arrow-down22"></i>
                                     </a>
-                                    <ul>
-                                        <li><a href="#">Fixed navbar</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="index.html#">
@@ -185,56 +185,100 @@
             </div>
             <!-- /main sidebar -->
 
+
             <!-- Main content -->
-            <div class="content-wrapper bg-grey-300">
+            <div class="content-wrapper bg-white">
 
                 <!-- Content area -->
                 <div class="content">
-                    <!-- main team -->
-                    <div class="team-assign mt-5">
+                    <!-- Main Setting Billing -->
+                    <div class="setting-bill">
                         <div class="row">
-                            <div class="col-md-12 col-lg-12 col-xl-8">
-                                <form class="bg-white shadow-sm  border-radius-lg p-5">
-                                    <h2 class="mb-5">Create assignment template</h2>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
+                            <div class="col-md-12 col-lg-10">
+                                <h3 class="border-bottom border-grey-300 pb-1">Billing details</h3>
+                                <div class="row mt-5">
+                                    <div class="col-md-12 col-lg-7">
+                                        <form action="">
+                                            <div class="row">
+                                                <!--  -->
+                                                <div class="col-lg-10">
+                                                    <div class="form-group">
+                                                        <label class="text-grey text-medium mb-1"> Legal name/ Full name </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="col-lg-10">
+                                                    <div class="form-group bootstrap__select-custom">
+                                                        <label class="text-grey text-medium mb-1"> Country </label>
+                                                        <select class="bootstrap-select" data-width="100%">
+                                                            <option value="AK">Credited account</option>
+                                                            <option value="HI">Hawaii</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label class="text-grey text-medium mb-1"> Address </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label class="text-grey text-medium mb-1"> Phone number (optional) </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label class="text-grey text-medium mb-1"> Contact person </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="text-grey text-medium mb-1"> Tax ID/ VAT number </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="text-grey text-medium mb-1"> Billing currency </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label class="text-grey text-medium mb-1"> Billing email address </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                            </div>
+                                            <div class="text-right">
+                                                <button class="btn btn-page btn-sm1">Add details</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
-                                    </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
-                                    </div>
-                                    <!--  -->
-                                    <div class="form-group mb-4">
-                                        <label class="text-medium">Name</label>
-                                        <input type="text" class="form-control border-radius-md" placeholder="project name">
-                                    </div>
-                                    <!--  -->
-                                    <div class="text-right mt-5"> <button class="btn btn-page btn-sm1">Create template</button> </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /end team -->
+                    <!-- /main Setting Billing -->
                 </div>
                 <!-- /content area -->
             </div>
             <!-- /main content -->
-            <div class="sidebar sidebar-main sidebar-right">
-
-            </div>
         </div>
         <!-- /page content -->
     </div>
     <!-- /page container -->
-    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>
