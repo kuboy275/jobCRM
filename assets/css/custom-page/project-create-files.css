@@ -1,0 +1,10 @@
+.project-create-files .uploader{
+    position: relative;
+}
+.project-create-files .uploader .filename{
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    border: 0;
+    text-align: center;
+}
